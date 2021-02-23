@@ -1,0 +1,63 @@
+/*fichiers css qui reinitialise*/
+@import 'minireset.css';
+@import 'normalize.css';
+
+/*fichiers css du site*/
+/* @import 'style_logo_menu.css';
+@import 'style_rechercher.css';
+@import 'style_filtres.css';
+@import 'style_hebergements.css';
+@import 'style_activites_marseille.css';
+@import 'style_footer.css'; */
+
+/*generalites*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+} 
+
+.encadrement {
+    margin: 1rem;
+}
+
+.cards_images {
+    background-color: white; 
+    border-top-right-radius: 30px; 
+    border-top-left-radius: 30px; 
+    overflow: hidden; 
+    object-fit: cover;
+}
+
+
+.cards {
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 0px 4px 4px #d3d2d2;
+    border-radius: 30px;
+}
+
+.card1 {
+    height: 200px;
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.devant {
+    z-index: 1000;
+}
+
+.titre1 {
+    font-family: 'Shrikhand', sans-serif;
+}
+
