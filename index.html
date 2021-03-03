@@ -9,7 +9,7 @@
     <title>Oh My Food</title>
     
     <!--lien fichier css-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.scss/main.css">
 </head>
 
 </head>
@@ -20,14 +20,14 @@
         <div class="header_logo p-1">
             <img src="images/logo/ohmyfood.png" alt="logo oh my food" class="header_logo--size">
         </div>
-        <div class="header__location">
+        <div class="header__localisation">
             <!--icone "emplacement"-->
             <div class="m-1"><i class="fas fa-map-marker-alt"></i></div>
             <div class="p-1 weight-1">Paris, Belleville</div>
         </div>
 
         <div class="header_reservation p-3">
-            <h2 class="header_titre2 weight-2">Réservez le menu qui vous convient</h2>
+            <h2 class="header_titre2 weight-3">Réservez le menu qui vous convient</h2>
             <p class="header_paragraphe">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <!--bouton-->
             <div type="button" class="header_bouton p-1">Explorer nos restaurants</div>
@@ -35,7 +35,7 @@
     </header>
 
 
-    <main class="encadrement">
+    <main>
         <!--section fonctionnement-->
         <section>
             <h2 class="main_section1_titre">Fonctionnement</h2>
@@ -88,13 +88,20 @@
                         <h3 class="weight-2">la palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
-                    <div class="cards_textes--court premier-plan">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <!-- 
-                    <div class="cards_textes--court second-plan">
-                        <i class="fas fa-heart"></i></div>
-                    </div> -->
+
+                    <div class="heart cards_textes--court">
+                        <div class="front-content">
+                          <div class="front">
+                            <i class="far fa-heart"></i>
+                          </div>
+                        </div>
+                  
+                        <div class="back">
+                          <div class="back-content">
+                            <i class="fas fa-heart"></i>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
 
@@ -113,10 +120,6 @@
                     <div class="cards_textes--court premier-plan">
                         <i class="far fa-heart"></i>
                     </div>
-                    <!-- 
-                    <div class="cards_textes--court second-plan">
-                        <i class="fas fa-heart"></i></div>
-                    </div> -->
                 </div>
             </div>
 
@@ -135,10 +138,6 @@
                     <i class="far fa-heart"></i>
                     </div>
                 </div>
-                <!-- 
-                <div class="cards_textes--court second-plan">
-                    <i class="fas fa-heart"></i></div>
-                </div> -->
             </div>
 
             <!--image restaurant 4-->
@@ -155,10 +154,6 @@
                     <div class="cards_textes--court premier-plan">
                         <i class="far fa-heart"></i>
                     </div>
-                    <!-- 
-                    <div class="cards_textes--court second-plan">
-                        <i class="fas fa-heart"></i></div>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -166,7 +161,7 @@
 
 
     <!--footer-->
-    <footer class="m-1">
+    <footer>
         <h1 class="titre1">ohmyfood</h1>
 
         <div class="l-height">
