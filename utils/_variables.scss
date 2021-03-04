@@ -1,0 +1,44 @@
+//colors
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99e2d0;
+$color-black: #0d0d0d;
+$color-white: lighten($color-black, 95%);
+
+//background colors
+$background-gray1: lighten($color-black, 50%);
+$background-gray2: lighten($color-black, 89%);
+$background-gray3: lighten($color-black, 85%);
+
+//border colors
+$border: lighten($color-black, 75%);
+
+//sizes
+$size-sm: 0.8rem;
+$initial-size: 1rem;
+$first-size: 1.1rem;
+$second-size: 1.2rem;
+$third-size: 1.3em;
+$fourth-size: 1.4rem;
+
+$taille-logo: 60%;
+
+//polices
+$first_font-family: 'Roboto', sans-serif;
+$second_font-family: 'Shrikhand', sans-serif;
+
+$margin-mobile: 0 15px;//a voir
+
+//weights
+$font-weight-1: 100;
+$font-weight-5: 500;
+$font-weight-7: 700;
+$font-weight-9: 900;
+
+//line-height
+$line-height20: 20px;
+$line-height25: 25px;
+$line-height35: 35px;
+
+//3 border radius
+$border-radius: 5px 25px 30px;

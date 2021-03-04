@@ -1,0 +1,296 @@
+//css
+/*generalites*/
+html, body {
+    width: 100%;
+    height: 100vh;
+    font-family: $first_font-family;
+    font-size: $first-size;
+    color: $color-black;
+    background-color: $color-white;
+}
+
+* {
+	box-sizing: border-box;
+    @include reset;
+} 
+
+.encadrement {
+    margin: $margin-mobile;
+}
+
+/*margins*/
+.m-1 {
+    margin: 15px;
+}
+
+.mr-1 {
+    margin-right: 30px;
+}
+
+.mr-2 {
+    margin-right: 10px;
+}
+
+/*paddings*/
+.p-1 {
+    padding: 20px 10px;
+}
+
+.p-2 {
+    padding: 0px 15px;
+}
+
+.p-3 {
+    padding: 50px 0;
+}
+
+/*font-weight*/
+.weight-5 {
+    font-weight: $font-weight-5;
+}
+    
+.weight-7 {
+    font-weight: $font-weight-7;
+}
+
+.weight-9 {
+    font-weight: $font-weight-9;
+}
+        
+/*line-height*/
+.l-height {
+    line-height: $line-height25;
+}
+    
+/*background-color*/
+.bg-2 {
+    background-color: $background-gray1;
+}
+
+
+//
+header, .bulle {
+    text-align: center;
+}
+
+.header_logo--size {
+    height: auto;
+    max-width: $taille-logo;
+} 
+    
+.header__localisation {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: $background-gray3; 
+    border-top: 2px solid $border;
+}
+
+.header_reservation {
+    background-color: $background-gray2;   
+    .header_titre2 {
+        font-size: $third-size;
+        padding: 0 30px 10px 30px;
+    }
+    .header_paragraphe {
+        font-size: $initial-size;
+        margin-top: 10px;
+        line-height: $line-height25;
+        color: $background-gray1;
+    }
+    .header_bouton {
+        display: inline-block;
+        background: linear-gradient(to top left, rgb(147, 86, 220),rgba(255, 121, 218, 0.9));
+        border-radius: nth($border-radius, 3);
+        color: $color-white;
+        padding: 20px;
+        cursor: pointer;
+        margin: 50px 0 20px 0;
+        @include shadows;
+        &:hover {
+            background: linear-gradient(to top left, rgba(147, 86, 220, 0.8),rgba(255, 121, 218, 0.8));
+            @include more-shadows;
+        }
+    }
+}
+
+/*section1*/
+main {
+    padding-bottom: 30px;
+}
+section:first-child {
+    padding: 50px 15px;
+}
+.main_section1_titre {
+    text-align: left;
+    font-size: $fourth-size;
+    font-weight: $font-weight-9;
+    padding: 15px 0;
+}
+        
+.section1_boutons {
+    text-decoration: none;
+    color: $color-black;
+    display: block;
+}
+
+.btn-l {
+    display: flex;
+    align-items: center;
+    background-color: $background-gray3;
+    margin: 30px 0;
+    border-radius: nth($border-radius, 2);
+    height: 90px;
+    @include shadows;
+    &:hover {
+        background-color: lighten($primary-color, 30%);
+        @include more-shadows;
+    }
+    .fa-mobile-alt, .fa-list, .fa-store {
+        color: $primary-color;
+        font-weight: $font-weight-9;
+    }
+    .bulle {
+        background-color: $primary-color;
+        border-radius: nth($border-radius, 3);
+        height: 30px;
+        width: 30px;
+        margin-right:30px;
+        margin-left: -10px;
+        color: $color-white;
+    }
+}
+
+    
+/*section2*/
+.main_section2_titre {
+    @extend .main_section1_titre;
+    padding-left: 15px;
+}
+
+.section:last-child {
+    background-color: $background-gray3;
+    padding: 50px 0;
+    margin: 0;   
+}
+
+.cards {
+    display: flex; 
+    flex-direction: column; 
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.cards_images {
+    background-color: $color-white; 
+    border-top-right-radius: nth($border-radius, 3);
+    border-top-left-radius: nth($border-radius, 3);
+    overflow: hidden; 
+    object-fit: cover;
+    position: relative;
+
+    .card-nouveau {
+        font-size: $size-sm;
+        font-weight: $font-weight-7;
+        padding: 8px;
+        border-radius: nth($border-radius, 1);
+        position: absolute;
+        top : 20px;
+        right: 20px;
+        z-index: 1000;
+        color : darken($third-color, 30%);
+        background-color: $third-color;
+    }
+    .image {
+        width: 100%;
+        object-fit: cover;
+    }   
+    .card1 {
+        height: 200px;
+    }
+}
+
+
+    
+.cards_textes {
+    display: flex;
+    align-items: center;
+    line-height: $line-height20;
+    padding-left: 10px;
+    border-bottom-left-radius: nth($border-radius, 3);
+    border-bottom-right-radius: nth($border-radius, 3);
+    font-size: $first-size;
+    background-color: $color-white;
+    @include shadows;
+    &:hover {
+        @include more-shadows;
+    }
+    .cards_textes--large {
+        flex: 3;
+        line-height: $line-height35;     
+        h3::first-letter{
+            text-transform: uppercase;
+        }
+    }
+    .cards_textes--court {
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+/*heart*/
+.heart {
+    .front{
+        transform:rotate(0deg);
+    }
+    .back{
+        overflow: hidden;
+        backface-visibility: hidden;
+        transition: transform .4s linear;
+        transform: rotateY(180deg);
+        .back-content{
+            background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);  
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text; 
+            background-clip: text;
+            color: transparent;
+        }
+    }
+    &:hover > .front{
+        transform: perspective(600px) rotateY(-180deg);
+    }
+    
+    &:hover > .back{
+        transform: perspective(600px) rotateY(0deg);
+    }     
+}
+
+/*footer*/
+footer {
+    margin: 0;
+    padding: 10px 0 40px 22px;
+    font-size: $size-sm;
+    color: $color-white;
+    background-color: $color-black;
+    line-height: $line-height25;
+    .titre1 {
+        font-family: $second_font-family;
+        font-size: $size-sm;
+        font-weight: $font-weight-1;
+        margin: 20px 0;
+    }
+
+    ul {
+        list-style-type: none;
+        & li a  {
+            @include dnone;
+            list-style: none;
+        }
+    }
+
+    .d-none  {
+        @include dnone;
+    }
+}         
