@@ -1,6 +1,234 @@
-/*generalites*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.cards:hover, .header_reservation .header_bouton:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.cards_images {
+  overflow: hidden;
+  object-fit: cover;
+}
+
+header, .bulle {
+  text-align: center;
+}
+
+.header_logo--size {
+  height: auto;
+  max-width: 60%;
+}
+
+.header__localisation {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #e6e6e6;
+  border-top: 2px solid #cccccc;
+}
+
+.header_reservation {
+  background-color: #f0f0f0;
+}
+.header_reservation .header_titre2 {
+  font-size: 1.3em;
+  padding: 0 30px 10px 30px;
+}
+.header_reservation .header_paragraphe {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 25px;
+  color: #8d8d8d;
+}
+.header_reservation .header_bouton {
+  display: inline-block;
+  background: linear-gradient(to top left, #9356dc, rgba(255, 121, 218, 0.9));
+  border-radius: 30px;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  margin: 50px 0 20px 0;
+  box-shadow: 5px 5px 10px #e6e6e6;
+}
+.header_reservation .header_bouton:hover {
+  background: linear-gradient(to top left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  box-shadow: 5px 5px 10px #b3b3b3;
+}
+
+/*section1*/
+.main_restaurants-principaux {
+  padding-bottom: 30px;
+}
+
+.main_section2_fonctionnement {
+  padding: 50px 15px;
+}
+
+.main_section1_titre, .main_section2_titre {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 15px 0;
+}
+
+.section1_boutons, .section2_cards {
+  text-decoration: none;
+  color: white;
+  color: #0d0d0d;
+  display: block;
+}
+
+.btn-l {
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  margin: 30px 0;
+  border-radius: 25px;
+  height: 90px;
+  box-shadow: 5px 5px 10px #e6e6e6;
+}
+.btn-l:hover {
+  background-color: #e4d5f6;
+  box-shadow: 5px 5px 10px #b3b3b3;
+}
+.btn-l .fa-mobile-alt, .btn-l .fa-list, .btn-l .fa-store {
+  color: #9356DC;
+  font-weight: 900;
+}
+.btn-l .bulle {
+  background-color: #9356DC;
+  border-radius: 30px;
+  height: 30px;
+  width: 30px;
+  margin-right: 30px;
+  margin-left: -10px;
+  color: white;
+}
+
+/*section2*/
+.main_section2_titre {
+  padding-left: 15px;
+}
+
+.main_section2_restaurants {
+  background-color: #e6e6e6;
+  padding: 50px 0;
+  margin: 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px #e6e6e6;
+}
+.cards:hover {
+  box-shadow: 5px 5px 10px #b3b3b3;
+}
+
+.cards_images {
+  background-color: white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  position: relative;
+}
+.cards_images .card-nouveau {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  color: #32b091;
+  background-color: #99e2d0;
+}
+.cards_images .image {
+  width: 100%;
+  object-fit: cover;
+}
+.cards_images .card1 {
+  height: 200px;
+}
+
+.cards_textes {
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  padding-left: 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 1.1rem;
+  background-color: white;
+}
+.cards_textes .cards_textes--large {
+  flex: 3;
+  line-height: 35px;
+}
+.cards_textes .cards_textes--large h3::first-letter {
+  text-transform: uppercase;
+}
+.cards_textes .cards_textes--court {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*heart*/
+.heart .front {
+  transform: rotate(0deg);
+}
+.heart .back {
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.4s linear;
+  transform: rotateY(180deg);
+}
+.heart .back .back-content {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.heart:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.heart:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+/*footer*/
+footer {
+  margin: 0;
+  padding: 10px 0 40px 22px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #0d0d0d;
+  line-height: 25px;
+}
+footer .titre1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 100;
+  margin: 20px 0;
+}
+footer ul {
+  list-style-type: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+footer .d-none {
+  text-decoration: none;
+  color: white;
+}
+
+/*generalites*/
 html, body {
   width: 100%;
   height: 100vh;
@@ -69,224 +297,463 @@ html, body {
   background-color: #8d8d8d;
 }
 
-header, .bulle {
-  text-align: center;
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
-.header_logo--size {
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* img,
+video {
+  height: auto;
+  max-width: 100%;
+} */
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+.header_logo--size2 {
   height: auto;
   max-width: 60%;
 }
 
-.header__localisation {
+.section__page-retour {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
-  background-color: #e6e6e6;
-  border-top: 2px solid #cccccc;
+  padding: 10px;
 }
 
-.header_reservation {
+.section__page-retour__icone {
+  width: 25%;
+}
+
+.section__page-retour__logo {
+  flex: 1;
+}
+
+.section__encadrement-photo {
+  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  height: 400px;
+  background-repeat: no-repeat, repeat;
+  width: 100%;
+  background-size: cover;
+}
+
+.section__menus-restaurant {
   background-color: #f0f0f0;
-}
-.header_reservation .header_titre2 {
-  font-size: 1.3em;
-  padding: 0 30px 10px 30px;
-}
-.header_reservation .header_paragraphe {
-  font-size: 1rem;
-  margin-top: 10px;
-  line-height: 25px;
-  color: #8d8d8d;
-}
-.header_reservation .header_bouton {
-  display: inline-block;
-  background: linear-gradient(to top left, #9356dc, rgba(255, 121, 218, 0.9));
-  border-radius: 30px;
-  color: white;
-  padding: 20px;
-  cursor: pointer;
-  margin: 50px 0 20px 0;
-  box-shadow: 5px 5px 10px #e6e6e6;
-}
-.header_reservation .header_bouton:hover {
-  background: linear-gradient(to top left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
-  box-shadow: 5px 5px 10px #b3b3b3;
-}
-
-/*section1*/
-main {
-  padding-bottom: 30px;
-}
-
-section:first-child {
-  padding: 50px 15px;
-}
-
-.main_section1_titre, .main_section2_titre {
-  text-align: left;
-  font-size: 1.4rem;
-  font-weight: 900;
-  padding: 15px 0;
-}
-
-.section1_boutons {
-  text-decoration: none;
-  color: #0d0d0d;
-  display: block;
-}
-
-.btn-l {
-  display: flex;
-  align-items: center;
-  background-color: #e6e6e6;
-  margin: 30px 0;
-  border-radius: 25px;
-  height: 90px;
-  box-shadow: 5px 5px 10px #e6e6e6;
-}
-.btn-l:hover {
-  background-color: #e4d5f6;
-  box-shadow: 5px 5px 10px #b3b3b3;
-}
-.btn-l .fa-mobile-alt, .btn-l .fa-list, .btn-l .fa-store {
-  color: #9356DC;
-  font-weight: 900;
-}
-.btn-l .bulle {
-  background-color: #9356DC;
-  border-radius: 30px;
-  height: 30px;
-  width: 30px;
-  margin-right: 30px;
-  margin-left: -10px;
-  color: white;
-}
-
-/*section2*/
-.main_section2_titre {
-  padding-left: 15px;
-}
-
-.section:last-child {
-  background-color: #e6e6e6;
-  padding: 50px 0;
-  margin: 0;
-}
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  padding: 0 20px;
-}
-
-.cards_images {
-  background-color: white;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  overflow: hidden;
-  object-fit: cover;
-  position: relative;
-}
-.cards_images .card-nouveau {
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 8px;
-  border-radius: 5px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  margin-top: -100px;
   z-index: 1000;
-  color: #32b091;
-  background-color: #99e2d0;
-}
-.cards_images .image {
-  width: 100%;
-  object-fit: cover;
-}
-.cards_images .card1 {
-  height: 200px;
 }
 
-.cards_textes {
-  display: flex;
-  align-items: center;
-  line-height: 20px;
-  padding-left: 10px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  font-size: 1.1rem;
-  background-color: white;
-  box-shadow: 5px 5px 10px #e6e6e6;
-}
-.cards_textes:hover {
-  box-shadow: 5px 5px 10px #b3b3b3;
-}
-.cards_textes .cards_textes--large {
-  flex: 3;
-  line-height: 35px;
-}
-.cards_textes .cards_textes--large h3::first-letter {
-  text-transform: uppercase;
-}
-.cards_textes .cards_textes--court {
-  flex: 1;
-  text-align: center;
-  cursor: pointer;
-}
-
-/*heart*/
-.heart .front {
-  transform: rotate(0deg);
-}
-.heart .back {
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.4s linear;
-  transform: rotateY(180deg);
-}
-.heart .back .back-content {
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.heart:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.heart:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-/*footer*/
-footer {
-  margin: 0;
-  padding: 10px 0 40px 22px;
-  font-size: 0.8rem;
-  color: white;
-  background-color: #0d0d0d;
-  line-height: 25px;
-}
-footer .titre1 {
+.section__titre-restaurant {
   font-family: "Shrikhand", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 100;
-  margin: 20px 0;
-}
-footer ul {
-  list-style-type: none;
-}
-footer ul li a {
-  text-decoration: none;
-  color: white;
-  list-style: none;
-}
-footer .d-none {
-  text-decoration: none;
-  color: white;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

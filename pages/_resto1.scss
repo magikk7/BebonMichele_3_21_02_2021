@@ -1,0 +1,42 @@
+.header_logo--size2 {
+    height: auto;
+    max-width: nth($taille-logo, 1);
+}
+
+.section__page-retour {
+    display: flex;
+    padding: 10px;
+}
+
+.section__page-retour__icone {
+    width: 25%;
+}
+
+.section__page-retour__logo {
+    flex: 1;
+}
+
+.section__encadrement-photo {
+    background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    height: 400px;
+
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    background-size: cover;   
+}
+
+
+
+.section__menus-restaurant {
+    background-color: $background-gray2;
+    @include border-top-radius;
+
+    margin-top: -100px;
+    z-index: 1000;
+
+}
+
+.section__titre-restaurant {
+    font-family: $second_font-family;
+    font-size: $initial-size;
+}

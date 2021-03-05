@@ -1,0 +1,67 @@
+/*generalites*/
+html, body {
+    width: 100%;
+    height: 100vh;
+    font-family: $first_font-family;
+    font-size: $first-size;
+    color: $color-black;
+    background-color: $color-white;
+}
+
+* {
+	box-sizing: border-box;
+    @include reset;
+} 
+
+.encadrement {
+    margin: $margin-mobile;
+}
+
+/*margins*/
+.m-1 {
+    margin: 15px;
+}
+
+.mr-1 {
+    margin-right: 30px;
+}
+
+.mr-2 {
+    margin-right: 10px;
+}
+
+/*paddings*/
+.p-1 {
+    padding: 20px 10px;
+}
+
+.p-2 {
+    padding: 0px 15px;
+}
+
+.p-3 {
+    padding: 50px 0;
+}
+
+/*font-weight*/
+.weight-5 {
+    font-weight: $font-weight-5;
+}
+    
+.weight-7 {
+    font-weight: $font-weight-7;
+}
+
+.weight-9 {
+    font-weight: $font-weight-9;
+}
+        
+/*line-height*/
+.l-height {
+    line-height: $line-height25;
+}
+    
+/*background-color*/
+.bg-2 {
+    background-color: $background-gray1;
+}

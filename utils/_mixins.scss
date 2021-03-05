@@ -16,3 +16,8 @@
 @mixin more-shadows {
     box-shadow: 5px 5px 10px darken($background-gray3, 20%);
 }
+
+@mixin border-top-radius {
+    border-top-right-radius: nth($border-radius, 3);
+    border-top-left-radius: nth($border-radius, 3); 
+}
