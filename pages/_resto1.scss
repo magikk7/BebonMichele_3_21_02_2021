@@ -25,18 +25,77 @@
     background-size: cover;   
 }
 
-
-
 .section__menus-restaurant {
     background-color: $background-gray2;
     @include border-top-radius;
-
     margin-top: -100px;
-    z-index: 1000;
+    padding: 0 20px;
+}
 
+.section__restaurant {
+    display: flex;
+    padding: 35px 0;
 }
 
 .section__titre-restaurant {
+    flex: 3;
     font-family: $second_font-family;
+    font-size: $third-size;
+}
+.restaurant-like {
+    flex: 1;
+    justify-content: baseline;
+    text-align: center;
+}
+
+.section__titre-menu{
+    text-transform: uppercase;
+    border-bottom: .15em solid $third-color;
+    width: 40px;
+    padding-bottom: 5px;
+    font-size: $size-sm2;
+}
+
+.section__titre-menu--boutons {
+    @extend .section1_boutons;
+}
+
+.btn-2{
+    @extend %btn-base;
+    background-color: $color-white;
+    line-height: $line-height30;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    align-items: flex-end;
+    &:hover {
+        background-color: $color-white;
+    }
+}
+
+.btn-2__menu {
+    flex: 5;
+}
+
+.btn-2__titre {
     font-size: $initial-size;
+}
+
+.btn-2__texte  {
+    font-size: $size-sm2;
+
+    white-space: nowrap; 
+    width: 290px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.btn-2__cout {
+    flex: 1;
+    text-align: center;
+    font-size: $size-sm2;
+}
+
+.hidden{
+    display:none;
+    background-color: $third-color;
 }

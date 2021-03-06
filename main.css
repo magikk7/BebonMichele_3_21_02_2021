@@ -9,6 +9,17 @@
   object-fit: cover;
 }
 
+.btn-2, .btn-l {
+  margin: 30px 0;
+  border-radius: 25px;
+  height: 90px;
+  box-shadow: 5px 5px 10px #e6e6e6;
+}
+.btn-2:hover, .btn-l:hover {
+  background-color: #e4d5f6;
+  box-shadow: 5px 5px 10px #b3b3b3;
+}
+
 header, .bulle {
   text-align: center;
 }
@@ -30,7 +41,7 @@ header, .bulle {
   background-color: #f0f0f0;
 }
 .header_reservation .header_titre2 {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   padding: 0 30px 10px 30px;
 }
 .header_reservation .header_paragraphe {
@@ -70,25 +81,30 @@ header, .bulle {
   padding: 15px 0;
 }
 
-.section1_boutons, .section2_cards {
+.section1_boutons, .section__titre-menu--boutons, .section2_cards {
   text-decoration: none;
   color: white;
   color: #0d0d0d;
   display: block;
 }
 
-.btn-l {
+.btn-2, .btn-l {
   display: flex;
   align-items: center;
-  background-color: #e6e6e6;
   margin: 30px 0;
   border-radius: 25px;
   height: 90px;
   box-shadow: 5px 5px 10px #e6e6e6;
 }
-.btn-l:hover {
+.btn-2:hover, .btn-l:hover {
   background-color: #e4d5f6;
   box-shadow: 5px 5px 10px #b3b3b3;
+}
+
+.btn-l {
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
 }
 .btn-l .fa-mobile-alt, .btn-l .fa-list, .btn-l .fa-store {
   color: #9356DC;
@@ -272,6 +288,10 @@ html, body {
 
 .p-3 {
   padding: 50px 0;
+}
+
+.p-4 {
+  padding: 0 20px;
 }
 
 /*font-weight*/
@@ -748,12 +768,70 @@ th:not([align]) {
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   margin-top: -100px;
-  z-index: 1000;
+  padding: 0 20px;
+}
+
+.section__restaurant {
+  display: flex;
+  padding: 35px 0;
 }
 
 .section__titre-restaurant {
+  flex: 3;
   font-family: "Shrikhand", sans-serif;
+  font-size: 1.3rem;
+}
+
+.restaurant-like {
+  flex: 1;
+  justify-content: baseline;
+  text-align: center;
+}
+
+.section__titre-menu {
+  text-transform: uppercase;
+  border-bottom: 0.15em solid #99e2d0;
+  width: 40px;
+  padding-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.btn-2 {
+  background-color: white;
+  line-height: 30px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  align-items: flex-end;
+}
+.btn-2:hover {
+  background-color: white;
+}
+
+.btn-2__menu {
+  flex: 5;
+}
+
+.btn-2__titre {
   font-size: 1rem;
+}
+
+.btn-2__texte {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  width: 290px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-2__cout {
+  flex: 1;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+  background-color: #99e2d0;
 }
 
 /*# sourceMappingURL=main.css.map */
