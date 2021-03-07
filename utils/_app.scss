@@ -134,6 +134,19 @@ header, .bulle {
         display: flex;
         justify-content: space-around;
     }
+    @media (min-width: 1030px) and (max-width: 1380px){
+        height: 700px;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 0 100px;
+    }
+    @media (min-width: 415px) and (max-width: 1030px){
+        margin: 0 200px;
+    }
+    @media (min-width: 414px){
+        margin: 0;
+    }
+
 }
 
 .cards {
@@ -145,6 +158,10 @@ header, .bulle {
     @media screen and (min-width: 1023px){
         height: 300px;
     }
+    @media (min-width: 1030px) and (max-width: 1380px){
+        width: 100%;
+        margin: 30px;
+        }
     &:hover {
         @include more-shadows;
         @extend %transition;

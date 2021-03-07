@@ -177,6 +177,24 @@ header, .bulle {
     justify-content: space-around;
   }
 }
+@media (min-width: 1030px) and (max-width: 1380px) {
+  .ensemble-cards {
+    height: 700px;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0 100px;
+  }
+}
+@media (min-width: 415px) and (max-width: 1030px) {
+  .ensemble-cards {
+    margin: 0 200px;
+  }
+}
+@media (min-width: 414px) {
+  .ensemble-cards {
+    margin: 0;
+  }
+}
 
 .cards {
   display: flex;
@@ -188,6 +206,12 @@ header, .bulle {
 @media screen and (min-width: 1023px) {
   .cards {
     height: 300px;
+  }
+}
+@media (min-width: 1030px) and (max-width: 1380px) {
+  .cards {
+    width: 100%;
+    margin: 30px;
   }
 }
 .cards:hover {
