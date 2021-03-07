@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.cards:hover, .header_reservation .header_bouton:hover {
+.cards:hover, .partie-commander_btn-commande:hover, .header_reservation .header_bouton:hover {
   transition: all 0.3s ease-in-out;
 }
 
@@ -9,15 +9,31 @@
   object-fit: cover;
 }
 
-.btn-2, .btn-l {
+.hidden, .btn-2, .btn-l {
+  display: flex;
+  align-items: center;
   margin: 30px 0;
   border-radius: 25px;
   height: 90px;
-  box-shadow: 5px 5px 10px #e6e6e6;
+  box-shadow: 5px 5px 10px silver;
 }
-.btn-2:hover, .btn-l:hover {
+.hidden:hover, .btn-2:hover, .btn-l:hover {
   background-color: #e4d5f6;
-  box-shadow: 5px 5px 10px #b3b3b3;
+  box-shadow: 5px 5px 10px #a6a6a6;
+}
+
+.partie-commander_btn-commande, .header_reservation .header_bouton {
+  background: linear-gradient(to top left, #9356dc, rgba(255, 121, 218, 0.9));
+  border-radius: 30px;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  margin: 50px 0 20px 0;
+  box-shadow: 5px 5px 10px silver;
+}
+.partie-commander_btn-commande:hover, .header_reservation .header_bouton:hover {
+  background: linear-gradient(to top left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  box-shadow: 5px 5px 10px #a6a6a6;
 }
 
 header, .bulle {
@@ -44,6 +60,12 @@ header, .bulle {
   font-size: 1.3rem;
   padding: 0 30px 10px 30px;
 }
+@media screen and (min-width: 1023px) {
+  .header_reservation .header_titre2 {
+    font-size: 1.69rem;
+    padding-top: 20px;
+  }
+}
 .header_reservation .header_paragraphe {
   font-size: 1rem;
   margin-top: 10px;
@@ -52,24 +74,16 @@ header, .bulle {
 }
 .header_reservation .header_bouton {
   display: inline-block;
-  background: linear-gradient(to top left, #9356dc, rgba(255, 121, 218, 0.9));
-  border-radius: 30px;
-  color: white;
-  padding: 20px;
-  cursor: pointer;
-  margin: 50px 0 20px 0;
-  box-shadow: 5px 5px 10px #e6e6e6;
 }
-.header_reservation .header_bouton:hover {
-  background: linear-gradient(to top left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
-  box-shadow: 5px 5px 10px #b3b3b3;
+@media screen and (min-width: 1023px) {
+  .header_reservation .header_bouton {
+    font-size: 1.56rem;
+    border-radius: 45px;
+    padding: 25px 30px;
+  }
 }
 
 /*section1*/
-.main_restaurants-principaux {
-  padding-bottom: 30px;
-}
-
 .main_section2_fonctionnement {
   padding: 50px 15px;
 }
@@ -80,6 +94,11 @@ header, .bulle {
   font-weight: 900;
   padding: 15px 0;
 }
+@media screen and (min-width: 1023px) {
+  .main_section1_titre, .main_section2_titre {
+    font-size: 2.1rem;
+  }
+}
 
 .section1_boutons, .section__titre-menu--boutons, .section2_cards {
   text-decoration: none;
@@ -87,24 +106,31 @@ header, .bulle {
   color: #0d0d0d;
   display: block;
 }
-
-.btn-2, .btn-l {
-  display: flex;
-  align-items: center;
-  margin: 30px 0;
-  border-radius: 25px;
-  height: 90px;
-  box-shadow: 5px 5px 10px #e6e6e6;
-}
-.btn-2:hover, .btn-l:hover {
-  background-color: #e4d5f6;
-  box-shadow: 5px 5px 10px #b3b3b3;
+@media screen and (min-width: 1023px) {
+  .section1_boutons, .section__titre-menu--boutons, .section2_cards {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .btn-l {
   display: flex;
   align-items: center;
   background-color: #e6e6e6;
+  transition: background-color 1s;
+  transform: scale(1);
+  transition: transform 1.2s;
+}
+@media screen and (min-width: 1023px) {
+  .btn-l {
+    width: 70%;
+    font-size: 1.3rem;
+    padding: 50px;
+    margin: 10px;
+  }
+}
+.btn-l:hover {
+  transform: scale(1.005);
 }
 .btn-l .fa-mobile-alt, .btn-l .fa-list, .btn-l .fa-store {
   color: #9356DC;
@@ -119,6 +145,14 @@ header, .bulle {
   margin-left: -10px;
   color: white;
 }
+@media screen and (min-width: 1023px) {
+  .btn-l .bulle {
+    font-size: 1.5rem;
+    height: 45px;
+    width: 45px;
+    margin-left: -70px;
+  }
+}
 
 /*section2*/
 .main_section2_titre {
@@ -131,15 +165,33 @@ header, .bulle {
   margin: 0;
 }
 
+@media screen and (min-width: 1023px) {
+  .section2_cards {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .ensemble-cards {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 .cards {
   display: flex;
   flex-direction: column;
   margin: 20px;
   border-radius: 30px;
-  box-shadow: 5px 5px 10px #e6e6e6;
+  box-shadow: 5px 5px 10px silver;
+}
+@media screen and (min-width: 1023px) {
+  .cards {
+    height: 300px;
+  }
 }
 .cards:hover {
-  box-shadow: 5px 5px 10px #b3b3b3;
+  box-shadow: 5px 5px 10px #a6a6a6;
 }
 
 .cards_images {
@@ -204,50 +256,77 @@ header, .bulle {
 .heart .back .back-content {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
-  -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .heart:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
+  transform: perspective(600px) rotateX(-180deg);
 }
 .heart:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateX(0deg);
 }
 
 /*footer*/
-footer {
+.pied-de-page {
   margin: 0;
-  padding: 10px 0 40px 22px;
+  height: 200px;
+  padding: 20px 0 40px 22px;
   font-size: 0.8rem;
   color: white;
   background-color: #0d0d0d;
   line-height: 25px;
 }
-footer .titre1 {
+@media screen and (min-width: 1023px) {
+  .pied-de-page {
+    font-size: 0.96rem;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+  }
+}
+.pied-de-page .titre1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 0.8rem;
   font-weight: 100;
-  margin: 20px 0;
 }
-footer ul {
+@media screen and (min-width: 1023px) {
+  .pied-de-page .titre1 {
+    text-align: center;
+    font-size: 1.12rem;
+    margin: 30px 0;
+  }
+}
+.pied-de-page .pied-de-page_liens--dnone {
   list-style-type: none;
 }
-footer ul li a {
+@media screen and (min-width: 1023px) {
+  .pied-de-page .pied-de-page_liens--dnone {
+    flex: 2;
+  }
+}
+.pied-de-page .pied-de-page_liens--dnone i a {
   text-decoration: none;
   color: white;
   list-style: none;
 }
-footer .d-none {
+
+.d-none {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 1023px) {
+  .pied-de-page_liens--width {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*generalites*/
 html, body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   color: #0d0d0d;
@@ -745,6 +824,9 @@ th:not([align]) {
 .section__page-retour {
   display: flex;
   padding: 10px;
+  justify-content: baseline;
+  align-content: baseline;
+  align-items: center;
 }
 
 .section__page-retour__icone {
@@ -768,7 +850,7 @@ th:not([align]) {
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   margin-top: -100px;
-  padding: 0 20px;
+  padding: 0 20px 40px 0;
 }
 
 .section__restaurant {
@@ -796,27 +878,40 @@ th:not([align]) {
   font-size: 0.9rem;
 }
 
+.section__titre-menu--boutons {
+  display: flex;
+}
+
 .btn-2 {
   background-color: white;
   line-height: 30px;
   padding-left: 15px;
   padding-bottom: 15px;
   align-items: flex-end;
+  margin-right: 0;
 }
 .btn-2:hover {
   background-color: white;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: all 1s ease-out;
 }
 
 .btn-2__menu {
   flex: 5;
+  margin-right: 0;
+}
+.btn-2__menu:hover {
+  margin-right: -100px;
+  transition: all 1s ease-out;
 }
 
 .btn-2__titre {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .btn-2__texte {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   white-space: nowrap;
   width: 290px;
   overflow: hidden;
@@ -824,14 +919,51 @@ th:not([align]) {
 }
 
 .btn-2__cout {
+  background-color: maroon;
   flex: 1;
   text-align: center;
   font-size: 0.9rem;
+  padding: 0 30px;
+}
+.btn-2__cout:hover {
+  margin-left: -100px;
+  transition: all 1s ease-out;
 }
 
 .hidden {
-  display: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100px;
   background-color: #99e2d0;
+}
+.hidden:hover {
+  background-color: #99e2d0;
+}
+
+.fa-check {
+  background-color: white;
+  color: #99e2d0;
+  border-radius: 30px;
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 4px;
+  margin-left: 40px;
+  width: 21px;
+  transition: transform 0.7s;
+}
+.fa-check:hover {
+  transform: rotate(-360deg);
+}
+
+.partie-commander {
+  background-color: #f0f0f0;
+  height: 150px;
+}
+
+.partie-commander_btn-commande {
+  text-align: center;
+  font-size: 0.95rem;
+  margin: 0 80px;
 }
 
 /*# sourceMappingURL=main.css.map */

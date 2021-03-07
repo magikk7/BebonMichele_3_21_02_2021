@@ -10,11 +10,11 @@
 }
 
 @mixin shadows {
-    box-shadow: 5px 5px 10px $background-gray3;
+    box-shadow: 5px 5px 10px darken($background-gray3, 15%);
 }
 
 @mixin more-shadows {
-    box-shadow: 5px 5px 10px darken($background-gray3, 20%);
+    box-shadow: 5px 5px 10px darken($background-gray3, 25%);
 }
 
 @mixin border-top-radius {
