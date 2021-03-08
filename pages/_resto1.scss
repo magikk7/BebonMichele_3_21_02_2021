@@ -9,30 +9,50 @@
     justify-content: baseline;
     align-content: baseline;
     align-items: center;
+    @media screen and (min-width: 1023px){
+        width: 100%;
+        }
 }
 
 .section__page-retour__icone {
     width: 25%;
+    color: black;
 }
 
 .section__page-retour__logo {
     flex: 1;
 }
 
-.section__encadrement-photo {
-    background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    height: 400px;
-
-    background-repeat: no-repeat, repeat;
-    width: 100%;
-    background-size: cover;   
+.section__encadrement--image1 {
+    background-image: $bg-image_1;
+    @extend %encadrement-image;
 }
+
+
+.section__encadrement--image2 {
+    background-image: $bg-image_1;
+    @extend %encadrement-image;
+}
+
+
+.section__encadrement--image3 {
+    background-image: $bg-image_1;
+    @extend %encadrement-image;
+}
+
+
+.section__encadrement--image4 {
+    background-image: $bg-image_1;
+    @extend %encadrement-image;
+}
+
+
 
 .section__menus-restaurant {
     background-color: $background-gray2;
     @include border-top-radius;
     margin-top: -100px;
-    padding: 0 20px 40px 0;
+    padding: 0 20px 40px 20px;
 }
 
 .section__restaurant {
@@ -41,9 +61,9 @@
 }
 
 .section__titre-restaurant {
-    flex: 3;
+    flex: 4;
     font-family: $second_font-family;
-    font-size: $third-size;
+    font-size: $fourth-size;
 }
 .restaurant-like {
     flex: 1;
@@ -53,7 +73,7 @@
 
 .section__titre-menu{
     text-transform: uppercase;
-    border-bottom: .15em solid $third-color;
+    border-bottom: .2em solid $third-color;
     width: 40px;
     padding-bottom: 5px;
     font-size: $size-sm2;
@@ -61,7 +81,9 @@
 
 .section__titre-menu--boutons {
     @extend .section1_boutons;
-    display: flex;
+    // display: flex;
+
+    display: inline-block;
 }
 
 .btn-2{
@@ -94,7 +116,7 @@
 }
 
 .btn-2__titre {
-    font-size: $size-sm2;
+    font-size: $initial-size;
 }
 
 .btn-2__texte  {
@@ -107,7 +129,7 @@
 }
 
 .btn-2__cout {
-    background-color: maroon;
+    //background-color: mediumaquamarine;//a supprimer
 
     flex: 1;
     text-align: center;
@@ -121,10 +143,15 @@
     }
 }
 
+.btn-2__validation {
+    display: flex;
+    height: 40px;
+    background-color: mediumslateblue;
+}
+
 .hidden{
     
     // transition: all 1s ease-out;
-
     @extend %btn-base;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -163,4 +190,9 @@ transition: transform .7s;
     text-align: center;
     font-size: .95rem;
     margin: 0 80px;
+    @media screen and (min-width: 1023px){
+        margin: 0 auto;
+        width: 350px;
+        font-size: .95rem * 1.2;
+    }
 }

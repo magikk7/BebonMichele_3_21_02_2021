@@ -34,3 +34,10 @@
         @extend %transition;
     }
 }
+
+%encadrement-image {
+    height: 400px;
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    background-size: cover;  
+}

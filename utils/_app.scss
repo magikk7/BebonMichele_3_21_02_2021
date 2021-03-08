@@ -221,6 +221,8 @@ header, .bulle {
 
 /*heart*/
 .heart {
+    position: relative;
+    
     .front{
         transform:rotate(0deg);
     }
@@ -246,6 +248,12 @@ header, .bulle {
     }     
 }
 
+.fa-heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
 /*footer*/
 .pied-de-page {
     margin: 0;
