@@ -91,6 +91,7 @@ header, .bulle {
     .fa-mobile-alt, .fa-list, .fa-store {
         color: $primary-color;
         font-weight: $font-weight-9;
+
     }
     .bulle {
         background-color: $primary-color;
@@ -100,6 +101,7 @@ header, .bulle {
         margin-right:30px;
         margin-left: -10px;
         color: $color-white;
+
         @media screen and (min-width: 1023px){
             font-size: 1.5rem;
             height: 30px *1.5;
@@ -109,6 +111,11 @@ header, .bulle {
     }
 }
 
+    .btn-1_bouton {
+        @media (max-width: 365px){
+        padding-right: 30px;
+        }
+}
     
 /*section2*/
 .main_section2_titre {
@@ -204,56 +211,66 @@ header, .bulle {
     border-bottom-right-radius: nth($border-radius, 3);
     font-size: $first-size;
     background-color: $color-white;
+
+    @media (max-width: 365px){
+        font-size: $size-sm2;
+    }
     .cards_textes--large {
         flex: 3;
         line-height: $line-height35; 
-
+        @media (max-width: 365px){
+        line-height: $line-height30; 
+        }
         h3::first-letter{
             text-transform: uppercase;
         }
     }
-    .cards_textes--court {
+    .container-heart {
         flex: 1;
         text-align: center;
-        cursor: pointer;
     }
 }
 
-/*heart*/
-.heart {
+/*like*/
+.container-heart {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     position: relative;
-    
-    .front{
-        transform:rotate(0deg);
-    }
-    .back{
-        overflow: hidden;
-        backface-visibility: hidden;
-        transition: transform .4s linear;
-        transform: rotateY(180deg);
-        .back-content{
-            background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);  
-            -webkit-background-clip: text;
-            -moz-background-clip: text; 
-            background-clip: text;
-            color: transparent;
-        }
-    }
-    &:hover > .front{
-        transform: perspective(600px) rotateX(-180deg);
-    }
-    
-    &:hover > .back{
-        transform: perspective(600px) rotateX(0deg);
-    }     
-}
+} 
 
 .fa-heart {
+    font-size: 22px;
+    cursor: pointer;
+    top: 50px;
+    right: 40px;
     position: absolute;
-    top: 0;
-    right: 0;
-
+    @media (max-width: 365px){
+        font-size: 18px;
+    }
 }
+
+.fas1 {
+    opacity: 0;
+    background-image: linear-gradient(to top right, $secondary-color, $primary-color);  
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.fas1:hover {
+    transform: scale(1.1);
+    animation: remplissage 1s forwards;
+}
+
+@keyframes remplissage {
+    100% {
+        opacity: 1;
+    }
+} 
+
 /*footer*/
 .pied-de-page {
     margin: 0;

@@ -161,6 +161,12 @@ header, .bulle {
   }
 }
 
+@media (max-width: 365px) {
+  .btn-1_bouton {
+    padding-right: 30px;
+  }
+}
+
 /*section2*/
 .main_section2_titre {
   padding-left: 15px;
@@ -261,52 +267,69 @@ header, .bulle {
   font-size: 1.1rem;
   background-color: white;
 }
+@media (max-width: 365px) {
+  .cards_textes {
+    font-size: 0.9rem;
+  }
+}
 .cards_textes .cards_textes--large {
   flex: 3;
   line-height: 35px;
 }
+@media (max-width: 365px) {
+  .cards_textes .cards_textes--large {
+    line-height: 30px;
+  }
+}
 .cards_textes .cards_textes--large h3::first-letter {
   text-transform: uppercase;
 }
-.cards_textes .cards_textes--court {
+.cards_textes .container-heart {
   flex: 1;
   text-align: center;
-  cursor: pointer;
 }
 
-/*heart*/
-.heart {
+/*like*/
+.container-heart {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
-}
-.heart .front {
-  transform: rotate(0deg);
-}
-.heart .back {
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.4s linear;
-  transform: rotateY(180deg);
-}
-.heart .back .back-content {
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.heart:hover > .front {
-  transform: perspective(600px) rotateX(-180deg);
-}
-.heart:hover > .back {
-  transform: perspective(600px) rotateX(0deg);
 }
 
 .fa-heart {
+  font-size: 22px;
+  cursor: pointer;
+  top: 50px;
+  right: 40px;
   position: absolute;
-  top: 0;
-  right: 0;
+}
+@media (max-width: 365px) {
+  .fa-heart {
+    font-size: 18px;
+  }
 }
 
+.fas1 {
+  opacity: 0;
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fas1:hover {
+  transform: scale(1.1);
+  animation: remplissage 1s forwards;
+}
+
+@keyframes remplissage {
+  100% {
+    opacity: 1;
+  }
+}
 /*footer*/
 .pied-de-page {
   margin: 0;
