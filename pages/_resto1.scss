@@ -109,6 +109,9 @@
     flex: 5;
 // width: 800px;
     margin-right: 0;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
     // &:hover {
     //     margin-right: -100px;
     //     transition: all 1s ease-out;
@@ -117,13 +120,16 @@
 
 .btn-2__titre {
     font-size: $initial-size;
+
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .btn-2__texte  {
     font-size: .85rem;
 
     white-space: nowrap; 
-    width: 290px; 
     overflow: hidden;
     text-overflow: ellipsis; 
 }
