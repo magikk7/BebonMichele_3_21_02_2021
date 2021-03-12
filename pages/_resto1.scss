@@ -81,9 +81,8 @@
 
 .section__titre-menu--boutons {
     @extend .section1_boutons;
-    // display: flex;
-
-    display: inline-block;
+    // display: inline-block;
+    display: block;//a voir
 }
 
 .btn-2{
@@ -95,13 +94,14 @@
     align-items: flex-end;
     margin-right: 0;
 
-
     &:hover {
         background-color: $color-white;
 
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        transition: all 1s ease-out;
+        // transition: all 1s ease-out;
+        
+        // margin-right: -100px;
     }
 }
 
@@ -109,10 +109,10 @@
     flex: 5;
 // width: 800px;
     margin-right: 0;
-    &:hover {
-        margin-right: -100px;
-        transition: all 1s ease-out;
-    }
+    // &:hover {
+    //     margin-right: -100px;
+    //     transition: all 1s ease-out;
+    // }
 }
 
 .btn-2__titre {
@@ -128,25 +128,32 @@
     text-overflow: ellipsis; 
 }
 
-.btn-2__cout {
-    //background-color: mediumaquamarine;//a supprimer
 
+.btn-2__validation {
+    display: flex;
+    width: 90px;
+    height: 40px;
+    background-color: mediumslateblue;
+
+    position: relative;
+}
+
+// .btn-2__validation:hover {
+//     width: 200px;
+//    }
+
+
+.btn-2__cout {
     flex: 1;
     text-align: center;
     font-size: $size-sm2;
     padding: 0 30px;
 
     // margin-right: 0;
-    &:hover {
-        margin-left: -100px;
-        transition: all 1s ease-out;
-    }
-}
-
-.btn-2__validation {
-    display: flex;
-    height: 40px;
-    background-color: mediumslateblue;
+    // &:hover {
+    //     margin-left: -100px;
+    //     transition: all 1s ease-out;
+    // }
 }
 
 .hidden{
@@ -158,9 +165,13 @@
     width: 100px;
     background-color: $third-color;
 
-
+    position: absolute;
+    top: -65px;
+    
     &:hover {
         background-color: $third-color;
+        width: 100px;
+        // transition: all 1s ease-out;
     }
 }
 
@@ -194,5 +205,34 @@ transition: transform .7s;
         margin: 0 auto;
         width: 350px;
         font-size: .95rem * 1.2;
+    }
+}
+
+
+/*animation des menus*/
+.animationMenus > div {
+    animation: apparaitre 1.6s ease-in-out;
+}
+
+.animationMenus .menu-entrees {
+    animation-delay: 1s;
+}
+
+.animationMenus .menu-plats {
+    animation-delay: 1.3s;  
+}
+
+.animationMenus .menu-desserts {
+    animation-delay: 1.6s;
+}
+
+@keyframes apparaitre {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
