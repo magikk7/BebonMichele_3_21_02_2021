@@ -1101,7 +1101,8 @@ th:not([align]) {
 }
 
 .section__titre-menu--boutons {
-  display: block;
+  display: inline-block;
+  width: 100%;
 }
 
 .btn-2 {
@@ -1112,23 +1113,33 @@ th:not([align]) {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-right: 0;
+  overflow: hidden;
 }
 
 .btn-2:hover {
   background-color: white;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .btn-2__menu {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-  margin-right: 0;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.btn-2__menu:hover {
+  -webkit-animation: gauche 1s ease both;
+          animation: gauche 1s ease both;
+}
+
+@-webkit-keyframes gauche {
+  100% {
+  }
+}
+
+@keyframes gauche {
+  100% {
+  }
 }
 
 .btn-2__titre {
@@ -1149,53 +1160,64 @@ th:not([align]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90px;
-  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
   background-color: mediumslateblue;
-  position: relative;
 }
 
 .btn-2__cout {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   text-align: center;
   font-size: 0.9rem;
   padding: 0 30px;
 }
 
 .hidden {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  margin: 0;
+  padding: 0;
   width: 100px;
   background-color: #99e2d0;
-  position: absolute;
-  top: -65px;
 }
 
 .hidden:hover {
   background-color: #99e2d0;
-  width: 100px;
 }
 
-.fa-check {
+.hidden .fa-check {
   background-color: white;
   color: #99e2d0;
   border-radius: 30px;
   font-size: .6rem;
   text-align: center;
   padding: 4px;
-  margin-left: 40px;
   width: 21px;
-  -webkit-transition: -webkit-transform .7s;
-  transition: -webkit-transform .7s;
-  transition: transform .7s;
-  transition: transform .7s, -webkit-transform .7s;
+  -webkit-animation: 2s linear 10ms 2 rotation;
+  animation: 2s linear 10ms 2 rotation;
 }
 
-.fa-check:hover {
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
+@-webkit-keyframes rotation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .partie-commander {

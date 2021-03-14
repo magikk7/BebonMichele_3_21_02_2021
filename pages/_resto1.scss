@@ -81,8 +81,8 @@
 
 .section__titre-menu--boutons {
     @extend .section1_boutons;
-    // display: inline-block;
-    display: block;//a voir
+    display: inline-block;
+    width: 100%;
 }
 
 .btn-2{
@@ -92,30 +92,26 @@
     padding-left: 15px;
     padding-bottom: 15px;
     align-items: flex-end;
-    margin-right: 0;
-
+    overflow: hidden;
     &:hover {
         background-color: $color-white;
-
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        // transition: all 1s ease-out;
-        
-        // margin-right: -100px;
     }
 }
 
 .btn-2__menu {
-    flex: 5;
-// width: 800px;
-    margin-right: 0;
+    width: 100%;
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
-    // &:hover {
-    //     margin-right: -100px;
-    //     transition: all 1s ease-out;
-    // }
+    &:hover {
+        animation: gauche 1s ease both;
+    }
+}
+
+@keyframes gauche {
+    100% {
+        // width: 80%;
+    }
 }
 
 .btn-2__titre {
@@ -134,67 +130,61 @@
     text-overflow: ellipsis; 
 }
 
-
 .btn-2__validation {
     display: flex;
-    width: 90px;
-    height: 40px;
+    justify-content: center;
+    align-items: center;
+
+    // width: 200px;//a voir
+    height: 60px;//ok
     background-color: mediumslateblue;
-
-    position: relative;
 }
-
-// .btn-2__validation:hover {
-//     width: 200px;
-//    }
 
 
 .btn-2__cout {
-    flex: 1;
+    // flex: 1;
     text-align: center;
     font-size: $size-sm2;
     padding: 0 30px;
-
-    // margin-right: 0;
-    // &:hover {
-    //     margin-left: -100px;
-    //     transition: all 1s ease-out;
-    // }
+    // width: 50px;//a voir
 }
 
 .hidden{
-    
-    // transition: all 1s ease-out;
     @extend %btn-base;
+    justify-content: center;
+    align-content: center;
+
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    margin: 0;
+    padding: 0;
     width: 100px;
     background-color: $third-color;
-
-    position: absolute;
-    top: -65px;
-    
     &:hover {
         background-color: $third-color;
-        width: 100px;
-        // transition: all 1s ease-out;
+        // width: 100px;//affichage bouton vert
+    }
+    
+.fa-check {
+    background-color: $color-white;
+    color: $third-color;
+    border-radius: 30px;
+    font-size: .6rem;
+    text-align: center;
+    padding: 4px;
+    width: 21px;
+
+    
+    -webkit-animation: 2s linear 10ms 2 rotation;
+    -moz-animation: 2s linear 10ms 2 rotation;
+    animation: 2s linear 10ms 2 rotation;
     }
 }
 
-.fa-check {
-background-color: $color-white;
-color: $third-color;
-border-radius: 30px;
-font-size: .6rem;
-text-align: center;
-padding: 4px;
-margin-left: 40px;
-width: 21px;
-
-transition: transform .7s;
-&:hover {
-    transform: rotate(-360deg);
-}
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .partie-commander {
