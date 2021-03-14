@@ -8,7 +8,7 @@ html, body {
     background-color: $color-white;
 }
 
-* {
+*, ::after, ::before {
 	box-sizing: border-box;
     @include reset;
 } 

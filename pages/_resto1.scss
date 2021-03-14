@@ -93,6 +93,8 @@
     padding-bottom: 15px;
     align-items: flex-end;
     overflow: hidden;
+
+    width: 100%;
     &:hover {
         background-color: $color-white;
     }
@@ -103,6 +105,7 @@
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
+
     &:hover {
         animation: gauche 1s ease both;
     }
@@ -110,7 +113,7 @@
 
 @keyframes gauche {
     100% {
-        // width: 80%;
+        width: 80%;
     }
 }
 
