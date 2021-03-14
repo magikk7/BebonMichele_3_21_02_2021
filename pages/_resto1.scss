@@ -52,23 +52,22 @@
     background-color: $background-gray2;
     @include border-top-radius;
     margin-top: -100px;
-    padding: 0 20px 40px 20px;
 }
 
 .section__restaurant {
     display: flex;
-    padding: 35px 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .section__titre-restaurant {
     flex: 4;
+    justify-content: center;
+    
     font-family: $second_font-family;
-    font-size: $fourth-size;
-}
-.restaurant-like {
-    flex: 1;
-    justify-content: baseline;
-    text-align: center;
+    font-size: $third-size;
+    padding-top: 20px;
 }
 
 .section__titre-menu{
