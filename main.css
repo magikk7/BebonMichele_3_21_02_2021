@@ -9,7 +9,7 @@
   object-fit: cover;
 }
 
-.hidden, .btn-2, .btn-l {
+.btn-2__validation, .btn-2, .btn-l {
   display: flex;
   align-items: center;
   margin: 30px 0;
@@ -17,7 +17,7 @@
   height: 90px;
   box-shadow: 5px 5px 10px silver;
 }
-.hidden:hover, .btn-2:hover, .btn-l:hover {
+.btn-2__validation:hover, .btn-2:hover, .btn-l:hover {
   background-color: #e4d5f6;
   box-shadow: 5px 5px 10px #a6a6a6;
 }
@@ -988,6 +988,81 @@ th:not([align]) {
   padding: 0;
 }
 
+.btn-2 {
+  background-color: white;
+  line-height: 30px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  align-items: flex-end;
+  overflow: hidden;
+  margin: 10px 0;
+  width: 100%;
+}
+.btn-2:hover {
+  background-color: white;
+}
+
+.btn-2__menu {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-2__titre {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-2__texte {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-2__cout {
+  align-self: flex-end;
+  font-size: 0.9rem;
+  padding: 0 30px;
+}
+
+.btn-2__validation {
+  justify-content: center;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #99e2d0;
+  height: 70px;
+  justify-content: center;
+  width: 0;
+  overflow: hidden;
+  transition: width ease-in-out 1s;
+}
+.btn-2__validation:hover {
+  background-color: #99e2d0;
+}
+.btn-2__validation .fa-check {
+  background-color: white;
+  color: #99e2d0;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 5px;
+  transition: transform ease-in-out 1s, color 1s;
+}
+
+.btn-2:hover .btn-2__validation {
+  width: 30%;
+}
+
+.btn-2:hover .btn-2__validation > .fa-check {
+  transform: rotate(360deg);
+}
+
 .header_logo--size2 {
   height: auto;
   max-width: 60%;
@@ -1063,98 +1138,6 @@ th:not([align]) {
   width: 100%;
 }
 
-.btn-2 {
-  background-color: white;
-  line-height: 30px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  align-items: flex-end;
-  overflow: hidden;
-  margin: 10px 0;
-  width: 100%;
-}
-.btn-2:hover {
-  background-color: white;
-}
-.btn-2:hover #validation {
-  transform: rotate(360deg);
-}
-
-.btn-2__menu {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.btn-2__menu:hover {
-  animation: gauche 1s ease both;
-}
-
-.fa-check:hover {
-  transform: rotate(360deg);
-}
-
-@keyframes gauche {
-  100% {
-    width: 80%;
-  }
-}
-.btn-2__titre {
-  font-size: 1rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.btn-2__texte {
-  font-size: 0.85rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.btn-2__validation {
-  display: flex;
-  align-items: center;
-  height: 60px;
-}
-
-.btn-2__cout {
-  align-self: flex-end;
-  font-size: 0.9rem;
-  padding: 0 30px;
-}
-
-.hidden {
-  justify-content: center;
-  align-content: center;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  margin: 0;
-  padding: 0;
-  width: 75px;
-  background-color: #99e2d0;
-}
-.hidden:hover {
-  background-color: #99e2d0;
-}
-.hidden .fa-check {
-  background-color: white;
-  color: #99e2d0;
-  border-radius: 50%;
-  font-size: 0.7rem;
-  text-align: center;
-  padding: 5px;
-  -webkit-animation: 2s linear 10ms 2 rotation;
-  -moz-animation: 2s linear 10ms 2 rotation;
-  animation: 2s linear 10ms 2 rotation;
-}
-
-@keyframes rotation {
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .partie-commander {
   background-color: #f0f0f0;
   height: 200px;
