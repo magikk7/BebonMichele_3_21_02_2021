@@ -5,17 +5,17 @@
 
 .section__page-retour {
     display: flex;
-    padding: 10px;
-    justify-content: baseline;
-    align-content: baseline;
+    // justify-content: flex-start;
+    // align-content: flex-start;
     align-items: center;
-    @media screen and (min-width: 1023px){
-        width: 100%;
-        }
+    text-align: left;
+    width: 100%;
+    padding: 10px;
 }
 
 .section__page-retour__icone {
-    width: 25%;
+    width: 30%;
+    padding-left: 20px;
     color: black;
 }
 
@@ -51,14 +51,14 @@
 .section__menus-restaurant {
     background-color: $background-gray2;
     @include border-top-radius;
-    margin-top: -100px;
+    margin-top: -120px;
+    padding: 0 15px;
 }
 
 .section__restaurant {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
 }
 
 .section__titre-restaurant {
@@ -70,11 +70,12 @@
     padding-top: 20px;
 }
 
-.section__titre-menu{
+.section__titre-menu {
     text-transform: uppercase;
     border-bottom: .2em solid $third-color;
-    width: 40px;
+    width: 48px;
     padding-bottom: 5px;
+    padding-top: 15px;//
     font-size: $size-sm2;
 }
 
@@ -84,18 +85,23 @@
     width: 100%;
 }
 
-.btn-2{
+.btn-2 {
     @extend %btn-base;
     background-color: $color-white;
     line-height: $line-height30;
     padding-left: 15px;
     padding-bottom: 15px;
-    align-items: flex-end;
+    align-items: flex-end; 
     overflow: hidden;
+
+    margin: 10px 0;
 
     width: 100%;
     &:hover {
         background-color: $color-white;
+    }
+    &:hover #validation {
+        transform: rotate(360deg);
     }
 }
 
@@ -110,11 +116,17 @@
     }
 }
 
+.fa-check:hover {
+    transform: rotate(360deg);
+}
+
 @keyframes gauche {
     100% {
         width: 80%;
     }
 }
+
+
 
 .btn-2__titre {
     font-size: $initial-size;
@@ -134,21 +146,15 @@
 
 .btn-2__validation {
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    // width: 200px;//a voir
-    height: 60px;//ok
-    background-color: mediumslateblue;
+    height: 60px;
 }
 
 
 .btn-2__cout {
-    // flex: 1;
-    text-align: center;
+    align-self: flex-end;
     font-size: $size-sm2;
     padding: 0 30px;
-    // width: 50px;//a voir
 }
 
 .hidden{
@@ -160,22 +166,19 @@
     border-bottom-left-radius: 0;
     margin: 0;
     padding: 0;
-    width: 100px;
+    width: 75px;
     background-color: $third-color;
     &:hover {
         background-color: $third-color;
-        // width: 100px;//affichage bouton vert
     }
     
 .fa-check {
     background-color: $color-white;
     color: $third-color;
-    border-radius: 30px;
-    font-size: .6rem;
+    border-radius: 50%;
+    font-size: .7rem;
     text-align: center;
-    padding: 4px;
-    width: 21px;
-
+    padding: 5px;
     
     -webkit-animation: 2s linear 10ms 2 rotation;
     -moz-animation: 2s linear 10ms 2 rotation;
@@ -191,7 +194,8 @@
 
 .partie-commander {
     background-color: $background-gray2;
-    height: 150px;
+    height: 200px;
+    padding-top: 30px;
 }
 
 .partie-commander_btn-commande {
@@ -205,7 +209,6 @@
         font-size: .95rem * 1.2;
     }
 }
-
 
 /*animation des menus*/
 .animationMenus > div {
