@@ -1,13 +1,11 @@
-//essai
 .btn-2 {
     @extend %btn-base;
     background-color: $color-white;
     line-height: $line-height30;
     padding-left: 15px;
-    padding-bottom: 15px;
     align-items: flex-end; 
     overflow: hidden;
-    margin: 10px 0;
+    margin: 8px 0;
     width: 100%;
     &:hover {
         background-color: $color-white;
@@ -19,6 +17,7 @@
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
+    padding-bottom: 15px;
 }
 
 .btn-2__titre {
@@ -38,7 +37,7 @@
 .btn-2__cout {
     align-self: flex-end;
     font-size: $size-sm2;
-    padding: 0 30px;
+    padding: 0 30px 15px 0;
 }
 
 .btn-2__validation {
@@ -50,12 +49,10 @@
     margin: 0;
     padding: 0;
     background-color: $third-color;
-    height: 70px;//
     justify-content: center;
     width: 0;
     overflow: hidden;
     transition: width ease-in-out 1s;
-
     &:hover {
         background-color: $third-color;
     }
