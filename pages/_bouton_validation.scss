@@ -1,8 +1,9 @@
 .btn-2 {
     @extend %btn-base;
     background-color: $color-white;
-    line-height: $line-height30;
-    padding: 0 0 5px 15px;
+    //line-height: $line-height30;
+    line-height: 25px;
+    padding: 0 0 0 15px;
     align-items: flex-end; 
     overflow: hidden;
     margin: 8px 0;
@@ -29,7 +30,7 @@
 }
 
 .btn-2__texte  {
-    font-size: .85rem;
+    font-size: .85rem;//
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -38,7 +39,7 @@
 .btn-2__cout {
     align-self: flex-end;
     font-size: $size-sm2;
-    padding: 0 30px 15px 0;
+    padding: 0 30px 20px 15px;
 }
 
 .btn-2__validation {
@@ -62,9 +63,9 @@
     background-color: $color-white;
     color: $third-color;
     border-radius: 50%;
-    font-size: .7rem;
+    font-size: .6rem;
     text-align: center;
-    padding: 5px;
+    padding: 4px;
     transition: transform ease-in-out 1s, color 1s;
     }
 }
