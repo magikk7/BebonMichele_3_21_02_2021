@@ -853,8 +853,10 @@ body {
 /*div1*/
 .div-apparition1 {
   position: absolute;
-  background-color: white;
+  top: 0;
+  left: 0;
   margin: 0 auto;
+  background-color: white;
   width: 100vw;
   height: 98vh;
   z-index: 1000;
@@ -879,12 +881,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-  margin: 50px auto;
+  margin: 50px 0;
   text-align: center;
   margin: 0 auto;
-  width: 100vw;
-  height: 95vh;
+  width: 90vw;
+  height: 80vh;
   border-radius: 30%;
   background-image: linear-gradient(to top left, #c9abee, #ffdff6);
 }
@@ -919,7 +920,7 @@ body {
   margin: 0 50px;
 }
 
-.carre1, .carre2, .carre3 {
+.carre1, .carre2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -929,17 +930,14 @@ body {
   box-shadow: 5px 5px 100px #9356DC;
   opacity: 0.6;
   position: absolute;
-  animation: etirement 6s infinite ease-in-out forwards;
-  border: 5px solid #9356DC;
+  animation: etirement 5s infinite ease-in-out forwards;
+  border: 4px solid #9356DC;
   color: #99e2d0;
+  border-radius: 15px;
 }
 
 .carre2 {
-  animation-delay: -4s;
-}
-
-.carre3 {
-  animation-delay: -2s;
+  animation-delay: -3s;
 }
 
 @keyframes etirement {
@@ -953,6 +951,10 @@ body {
     transform: scale(2);
   }
 }
+.size-utensils {
+  font-size: 1rem;
+}
+
 /*like*/
 .container-heart {
   flex: 1;
