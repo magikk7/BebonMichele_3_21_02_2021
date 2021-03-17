@@ -1,18 +1,18 @@
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/placehorders';
-@import 'utils/app';
 @import 'utils/generalites';
+@import 'utils/app';
 
 @import 'base/normalize';
 @import 'base/reset';
 
-@import 'pages/header';
-@import 'pages/footer';
-
 @import 'pages/loading';
 @import 'pages/coeur';
 @import 'pages/bouton_validation';
+
+@import 'pages/header';
+@import 'pages/footer';
 
 @import 'pages/resto1';
 @import 'pages/resto2';
