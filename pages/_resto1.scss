@@ -59,8 +59,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-width: 415px) and (max-width: 768px) {        
+        margin: 0 50px;
+    }
+    @media (min-width: 769px) and (max-width: 917px) {        
+        font-size: $third-size;
+        width: 82%;
+        background-color: blanchedalmond;
+    }
+    @media (min-width: 916px) and (max-width: 1279px) {        
+        font-size: $third-size *1.1;
+        width: 87%;
+    }
     @media screen and (min-width: 1280px) {
         margin-bottom: 30px;
+        font-size: $third-size *1.2;
+        width: 50%;
     }
 }
 
@@ -71,9 +85,26 @@
     font-family: $second_font-family;
     font-size: $third-size;
     padding-top: 20px;
-    @media screen and (min-width: 1280px) {
+    @media (min-width: 415px) and (max-width: 768px) {        
+        margin: 0 8px;
+        background-color: aqua;
+    }
+    @media (min-width: 769px) and (max-width: 1279px) {        
+        margin: 10px 150px 0 150px;
+        font-size: $third-size *1.1;
+        background-color: aquamarine;
+    }
+    @media screen and(min-width: 1280px) {        
+        margin: 21px 150px 0 0;
         font-size: $third-size *1.2;
     }
+}
+
+.heart-responsive {
+@media (min-width: 415px) and (max-width: 768px) {        
+    margin: 0 50px;
+    background-color: aqua;    
+}
 }
 
 .section__titre-menu {
@@ -147,10 +178,8 @@
     @media (min-width: 769px) and (max-width: 1279px) {        
         margin: 0 150px;
     }
-    @media screen and (min-width: 1280px) {        
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
+    @media screen and (min-width: 1280px) {       
         height: 500px; 
+        display: flex;
     }
 }
