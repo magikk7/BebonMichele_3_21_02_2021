@@ -64,13 +64,7 @@ html, body {
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   color: #0d0d0d;
-  background-color: white;
-}
-
-@media screen and (min-width: 1280px) {
-  html, body {
-    background-color: #f0f0f0;
-  }
+  background-color: #f0f0f0;
 }
 
 *, ::after, ::before {
@@ -1184,6 +1178,7 @@ body {
 
 header {
   text-align: center;
+  background-color: white;
 }
 
 .header_logo--size {
@@ -1329,12 +1324,41 @@ header {
 
 .section__page-retour__icone {
   width: 30%;
-  padding-left: 20px;
+  padding-left: 10px;
   color: black;
   position: absolute;
-  top: 35px;
   left: 0;
   z-index: 1000;
+}
+
+@media screen and (min-width: 446px) {
+  .section__page-retour__icone {
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .section__page-retour__icone {
+    top: 27px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .section__page-retour__icone {
+    top: 30px;
+  }
+}
+
+@media screen and (min-width: 669px) {
+  .section__page-retour__icone {
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .section__page-retour__icone {
+    top: 35px;
+  }
 }
 
 .section__page-retour__logo {
@@ -1343,6 +1367,7 @@ header {
           flex: 1;
   position: relative;
   text-align: center;
+  background-color: white;
 }
 
 .section__encadrement--image1 {
@@ -1393,10 +1418,20 @@ header {
   padding: 0 15px;
 }
 
+@media screen and (min-width: 769px) {
+  .section__menus-restaurant {
+    background-color: #ae80e5;
+    margin: -760px 100px 0 100px;
+    border-radius: 50px;
+    -webkit-animation: couleur 10s infinite ease-in-out both;
+            animation: couleur 10s infinite ease-in-out both;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .section__menus-restaurant {
     background-color: #ae80e5;
-    margin: -500px 200px 0 200px;
+    margin: -600px 200px 0 200px;
     border-radius: 50px;
     -webkit-animation: couleur 10s infinite ease-in-out both;
             animation: couleur 10s infinite ease-in-out both;
@@ -1439,24 +1474,15 @@ header {
           align-items: center;
 }
 
-@media (min-width: 415px) and (max-width: 768px) {
-  .section__restaurant {
-    margin: 0 50px;
-  }
-}
-
 @media (min-width: 769px) and (max-width: 917px) {
   .section__restaurant {
     font-size: 1.3rem;
-    width: 82%;
-    background-color: blanchedalmond;
   }
 }
 
 @media (min-width: 916px) and (max-width: 1279px) {
   .section__restaurant {
     font-size: 1.43rem;
-    width: 87%;
   }
 }
 
@@ -1479,24 +1505,16 @@ header {
   padding-top: 20px;
 }
 
-@media (min-width: 415px) and (max-width: 768px) {
-  .section__titre-restaurant {
-    margin: 0 8px;
-    background-color: aqua;
-  }
-}
-
 @media (min-width: 769px) and (max-width: 1279px) {
   .section__titre-restaurant {
-    margin: 10px 150px 0 150px;
+    margin: 10px 0 0 0;
     font-size: 1.43rem;
-    background-color: aquamarine;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .section__titre-restaurant {
-    margin: 21px 150px 0 0;
+    margin: 21px 0 0 0;
     font-size: 1.56rem;
   }
 }
@@ -1504,7 +1522,6 @@ header {
 @media (min-width: 415px) and (max-width: 768px) {
   .heart-responsive {
     margin: 0 50px;
-    background-color: aqua;
   }
 }
 
@@ -1590,24 +1607,6 @@ header {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-  }
-}
-
-@media (min-width: 415px) and (max-width: 768px) {
-  .animationMenus {
-    margin: 0 50px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1279px) {
-  .animationMenus {
-    margin: 0 150px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .animationMenus {
-    margin: 0 auto;
   }
 }
 

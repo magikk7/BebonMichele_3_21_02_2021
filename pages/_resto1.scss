@@ -13,19 +13,34 @@
 
 .section__page-retour__icone {
     width: 30%;
-    padding-left: 20px;
+    padding-left: 10px;
     color: black;
 
     position: absolute;
-    top: 35px;
     left: 0;
     z-index: 1000;
+    @media screen and (min-width: 446px) {
+        top: 20px;  
+    }
+    @media screen and (min-width: 550px) {
+        top: 27px;  
+    }
+    @media screen and (min-width: 640px) {
+        top: 30px;  
+    }
+    @media screen and (min-width: 669px) {
+        top: 20px;  
+    }
+    @media screen and (min-width: 670px) {
+        top: 35px;
+    }
 }
 
 .section__page-retour__logo {
     flex: 1;
     position: relative;
     text-align: center;
+    background-color: $color-white;
 }
 
 .section__encadrement--image1 {
@@ -65,9 +80,15 @@
     @include border-top-radius;
     margin-top: -120px;
     padding: 0 15px;
+    @media screen and (min-width: 769px) {
+        background-color: lighten($primary-color, 10%);
+        margin: -760px 100px 0 100px;
+        border-radius: 50px;
+        animation: couleur 10s infinite ease-in-out both;
+    }
     @media screen and (min-width: 1280px) {
         background-color: lighten($primary-color, 10%);
-        margin: -500px 200px 0 200px;
+        margin: -600px 200px 0 200px;
         border-radius: 50px;
         animation: couleur 10s infinite ease-in-out both;
     }
@@ -89,43 +110,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (min-width: 415px) and (max-width: 768px) {        
-        margin: 0 50px;
-    }
     @media (min-width: 769px) and (max-width: 917px) {        
         font-size: $third-size;
-        width: 82%;
-        background-color: blanchedalmond;
     }
     @media (min-width: 916px) and (max-width: 1279px) {        
         font-size: $third-size *1.1;
-        width: 87%;
     }
     @media screen and (min-width: 1280px) {
         margin-bottom: 30px;
-        //margin: 0 auto 70px auto;
         font-size: $third-size *1.2;
     }
 }
 
-.section__titre-restaurant {
+.section__titre-restaurant {//////////////////
     flex: 4;
     justify-content: center;
     
     font-family: $second_font-family;
     font-size: $third-size;
     padding-top: 20px;
-    @media (min-width: 415px) and (max-width: 768px) {        
-        margin: 0 8px;
-        background-color: aqua;
-    }
     @media (min-width: 769px) and (max-width: 1279px) {        
-        margin: 10px 150px 0 150px;
+        margin: 10px 0 0 0;
         font-size: $third-size *1.1;
-        background-color: aquamarine;
     }
     @media screen and(min-width: 1280px) {        
-        margin: 21px 150px 0 0;
+        margin: 21px 0 0 0;
         font-size: $third-size *1.2;
     }
 }
@@ -133,7 +142,6 @@
 .heart-responsive {
 @media (min-width: 415px) and (max-width: 768px) {        
     margin: 0 50px;
-    background-color: aqua;    
 }
 }
 
@@ -165,9 +173,9 @@
     text-align: center;
     font-size: .95rem;
     margin: 0 80px;
-    @media screen and (min-width: 1023px){
-        font-size: .95rem *1.5;
-        margin: 0 350px;
+    @media screen and (min-width: 1023px){//ok
+    font-size: .95rem *1.5;
+    margin: 0 350px;
     }
 }
 
@@ -196,17 +204,5 @@
     to {
         opacity: 1;
         transform: translateY(0px);
-    }
-}
-
-.animationMenus {
-    @media (min-width: 415px) and (max-width: 768px) {        
-        margin: 0 50px;
-    }
-    @media (min-width: 769px) and (max-width: 1279px) {        
-        margin: 0 150px;
-    }
-    @media screen and (min-width: 1280px) {       
-        margin: 0 auto;
     }
 }

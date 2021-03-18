@@ -5,10 +5,7 @@ html, body {
     font-family: $first_font-family;
     font-size: $first-size;
     color: $color-black;
-    background-color: $color-white;
-    @media screen and (min-width: 1280px) {
-        background-color: $background-gray2;
-    }
+    background-color:  $background-gray2;
 }
 
 *, ::after, ::before {
