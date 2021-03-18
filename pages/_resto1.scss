@@ -39,16 +39,25 @@
 .section__encadrement--image2 {
     background-image: $bg-image_1;
     @extend %encadrement-image;
+    @media screen and (min-width: 1280px) {
+        height: 100vh;
+    }
 }
 
 .section__encadrement--image3 {
     background-image: $bg-image_1;
     @extend %encadrement-image;
+    @media screen and (min-width: 1280px) {
+        height: 100vh;
+    }
 }
 
 .section__encadrement--image4 {
     background-image: $bg-image_1;
     @extend %encadrement-image;
+    @media screen and (min-width: 1280px) {
+        height: 100vh;
+    }
 }
 
 .section__menus-restaurant {
