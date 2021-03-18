@@ -1,8 +1,8 @@
 .btn-2 {
     @extend %btn-base;
     background-color: $color-white;
-    //line-height: $line-height30;
-    line-height: 25px;//a faire
+    line-height: $line-height25;
+    // line-height: 25px;//a faire
     padding: 0 0 0 15px;
     align-items: flex-end; 
     overflow: hidden;
@@ -81,6 +81,9 @@
 
 .btn-2:hover .btn-2__validation {
     width: 30%;
+    @media screen and (min-width: 768px) {
+        width: 20%;
+    }
     @media screen and (min-width: 1280px) {
         width: 10%;
     }

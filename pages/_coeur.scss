@@ -6,6 +6,9 @@
     align-items: center;
     width: 100px;
     height: 100px;
+    @media (max-width: 320px) {        
+    width: 68px;
+    }
 } 
 
 .fa-heart {
