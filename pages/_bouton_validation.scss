@@ -11,6 +11,15 @@
     &:hover {
         background-color: $color-white;
     }
+    // @media (min-width: 415px) and (max-width: 768px) {        
+    //    
+    // }
+    // @media (min-width: 769px) and (max-width: 1279px) {        
+    //     
+    // }
+    // @media screen and (min-width: 1280px) {        
+    //     
+    // }
 }
 
 .btn-2__menu {
@@ -72,8 +81,12 @@
 
 .btn-2:hover .btn-2__validation {
     width: 30%;
+    @media screen and (min-width: 1280px) {
+        width: 10%;
+    }
 }
 
 .btn-2:hover .btn-2__validation > .fa-check  {
     transform: rotate(360deg);
 }
+
