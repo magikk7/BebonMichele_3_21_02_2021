@@ -13,23 +13,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    background-color: $background-gray3; 
     border-top: 2px solid $border;
+    background-color: $background-gray3;     
 }
 
 .header_reservation {
     background-color: $background-gray2;   
     .header_titre2 {
-        font-size: $third-size;
         padding: 0 30px 10px 30px;
+        font-size: $third-size;
         @media screen and (min-width: 1023px){
-            font-size: $third-size *1.3;
             padding-top: 20px;
+            font-size: $third-size *1.3;
         }
     }
     .header_paragraphe {
-        font-size: $initial-size;
         margin-top: 10px;
+        font-size: $initial-size;
         line-height: $line-height25;
         color: $background-gray1;
     }
@@ -38,9 +38,9 @@ header {
         display: inline-block;
         @extend %bouton-clicable;
         @media screen and (min-width: 1023px){
-            font-size: $third-size *1.2;
-            border-radius: nth($border-radius, 4);
             padding: 25px 30px;
+            font-size: $third-size *1.2;
+            border-radius: nth($border-radius, 4);            
         }
     }
 }

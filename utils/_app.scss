@@ -1,13 +1,12 @@
-
-
 /*section1*/
 .main_section2_fonctionnement {
     padding: 50px 15px;
+    background-color: $color-white;
 }
 
 .main_section1_titre {
-    text-align: left;
     font-size: $fourth-size;
+    text-align: left;
     font-weight: $font-weight-9;
     padding: 15px 0; 
     @media screen and (min-width: 1023px){
@@ -35,9 +34,9 @@
     transition: transform 1.2s;
     @media screen and (min-width: 1023px){
         width: 70%;
-        font-size: $initial-size*1.3;
-        padding: 50px;
         margin: 10px;
+        padding: 50px;        
+        font-size: $initial-size*1.3;       
     }
     &:hover {
         transform: scale(1.005);
@@ -50,18 +49,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $primary-color;
-        border-radius: 50%;
         height: 30px;
         width: 30px;
+        border-radius: 50%;
         margin-right:30px;
         margin-left: -10px;
         color: $color-white;
+        background-color: $primary-color;
         @media screen and (min-width: 1023px){
-            font-size: 1.5rem;
             height: 30px *1.5;
             width: 30px *1.5;
             margin-left: -10px *7;
+            font-size: 1.5rem;
         }
     }
 }
@@ -79,9 +78,9 @@
 }
 
 .main_section2_restaurants {
-    background-color: $background-gray3;
+    margin: 0; 
     padding: 50px 0;
-    margin: 0;   
+    background-color: $background-gray3;  
 }
 
 .section2_cards {
@@ -97,9 +96,9 @@
         justify-content: space-around;
     }
     @media (min-width: 1030px) and (max-width: 1380px){
-        height: 700px;
         flex-wrap: wrap;
         align-content: center;
+        height: 700px;
         margin: 0 100px;
     }
     @media (min-width: 415px) and (max-width: 1030px){
@@ -108,7 +107,6 @@
     @media (min-width: 414px){
         margin: 0;
     }
-
 }
 
 .cards {
@@ -137,14 +135,14 @@
     position: relative;
 
     .card-nouveau {
-        font-size: $size-sm;
-        font-weight: $font-weight-7;
-        padding: 8px;
-        border-radius: nth($border-radius, 1);
         position: absolute;
         top : 20px;
         right: 20px;
         z-index: 1000;
+        padding: 8px;
+        border-radius: nth($border-radius, 1);
+        font-size: $size-sm;
+        font-weight: $font-weight-7;        
         color : darken($third-color, 30%);
         background-color: $third-color;
     }
@@ -160,13 +158,12 @@
 .cards_textes {
     display: flex;
     align-items: center;
-    line-height: $line-height20;
     padding-left: 10px;
     border-bottom-left-radius: nth($border-radius, 3);
     border-bottom-right-radius: nth($border-radius, 3);
     font-size: $first-size;
+    line-height: $line-height20;
     background-color: $color-white;
-
     @media (max-width: 365px){
         font-size: $size-sm2;
     }

@@ -1,25 +1,15 @@
 .btn-2 {
     @extend %btn-base;
-    background-color: $color-white;
-    line-height: $line-height25;
-    // line-height: 25px;//a faire
+    width: 100%;
+    margin: 8px 0;
     padding: 0 0 0 15px;
+    line-height: $line-height25;
     align-items: flex-end; 
     overflow: hidden;
-    margin: 8px 0;
-    width: 100%;
+    background-color: $color-white;
     &:hover {
         background-color: $color-white;
     }
-    // @media (min-width: 415px) and (max-width: 768px) {        
-    //    
-    // }
-    // @media (min-width: 769px) and (max-width: 1279px) {        
-    //     
-    // }
-    // @media screen and (min-width: 1280px) {        
-    //     
-    // }
 }
 
 .btn-2__menu {
@@ -39,7 +29,7 @@
 }
 
 .btn-2__texte  {
-    font-size: .85rem;//
+    font-size: $size-sm1;
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -54,27 +44,25 @@
 .btn-2__validation {
     @extend %btn-base;
     justify-content: center;
-
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    width: 0;
     margin: 0;
     padding: 0;
-    background-color: $third-color;
-    justify-content: center;
-    width: 0;
     overflow: hidden;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: $third-color;
     transition: width ease-in-out 1s;
     &:hover {
         background-color: $third-color;
     }
     
 .fa-check {
-    background-color: $color-white;
-    color: $third-color;
-    border-radius: 50%;
+    padding: 4px;
     font-size: .6rem;
     text-align: center;
-    padding: 4px;
+    border-radius: 50%;
+    color: $third-color;
+    background-color: $color-white;    
     transition: transform ease-in-out 1s, color 1s;
     }
 }
@@ -92,4 +80,3 @@
 .btn-2:hover .btn-2__validation > .fa-check  {
     transform: rotate(360deg);
 }
-

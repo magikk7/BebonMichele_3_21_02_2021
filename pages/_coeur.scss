@@ -12,13 +12,13 @@
 } 
 
 .fa-heart {
-    font-size: 22px;
+    font-size: 1.375rem;
     cursor: pointer;
     top: 50px;
     right: 40px;
     position: absolute;
     @media screen and (max-width: 365px){
-        font-size: 18px;//
+        font-size: 1.125rem;
     }
 
     @media (min-width: 769px) and (max-width: 1279px) {        
@@ -50,7 +50,7 @@
 }
 
 .emplacement-coeur {
-    background-color: mediumturquoise;
     margin: 0;
     padding: 0;
+    background-color: mediumturquoise;    
 }
