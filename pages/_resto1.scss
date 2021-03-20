@@ -162,19 +162,40 @@
 }
 
 .partie-commander {
-    height: 350px;
-    padding-top: 100px;
+    height: 200px;
+
+    @media screen and (min-width: 769px){
+        padding-top: 100px;
+        height: 350px;
+    }
 }
 
 .partie-commander_btn-commande {
     @extend %bouton-clicable;
-    text-align: center;
     font-size: .95rem;
+    height: 62px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     margin: 0 80px;
-    @media screen and (min-width: 1023px){//ok
-    font-size: .95rem *1.5;
-    margin: 0 350px;
-    }
+        @media screen and (min-width: 768px) {
+            margin: 0 200px;
+            font-size: .95rem *1.1;
+        }
+        @media screen and (min-width: 1000px) {
+            margin: 0 300px;
+        }
+        @media screen and (min-width: 1280px) {
+            margin: 0 400px;
+            font-size: .95rem *1.2;
+        }
+        @media screen and (min-width: 1440px) {
+            margin: 0 500px;
+        }
+        @media screen and (min-width: 1700px) {
+            margin: 0 600px;
+        }
 }
 
 /*animation des menus*/

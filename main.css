@@ -1296,19 +1296,49 @@ header {
 }
 
 .partie-commander {
-  height: 350px;
-  padding-top: 100px;
+  height: 200px;
+}
+@media screen and (min-width: 769px) {
+  .partie-commander {
+    padding-top: 100px;
+    height: 350px;
+  }
 }
 
 .partie-commander_btn-commande {
-  text-align: center;
   font-size: 0.95rem;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   margin: 0 80px;
 }
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 768px) {
   .partie-commander_btn-commande {
-    font-size: 1.425rem;
-    margin: 0 350px;
+    margin: 0 200px;
+    font-size: 1.045rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .partie-commander_btn-commande {
+    margin: 0 300px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .partie-commander_btn-commande {
+    margin: 0 400px;
+    font-size: 1.14rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .partie-commander_btn-commande {
+    margin: 0 500px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .partie-commander_btn-commande {
+    margin: 0 600px;
   }
 }
 
