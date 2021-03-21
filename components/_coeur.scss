@@ -32,9 +32,8 @@
 .fas1 {
     opacity: 0;
     background-image: linear-gradient(to top right, $secondary-color, $primary-color);  
-    background-clip: text;
+    background-clip: content-box;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     color: transparent;
 }
 
