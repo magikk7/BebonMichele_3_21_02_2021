@@ -36,6 +36,7 @@ header {
 
     .header_bouton {
         display: inline-block;
+        @include dnone;
         @extend %bouton-clicable;
         @media screen and (min-width: 1023px){
             padding: 25px 30px;
