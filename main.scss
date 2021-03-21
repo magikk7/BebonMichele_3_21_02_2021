@@ -1,18 +1,18 @@
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/placehorders';
-@import 'utils/generalites';
-@import 'utils/app';
 
 @import 'base/normalize';
 @import 'base/reset';
+@import 'base/generalites';
 
-@import 'pages/loading';
-@import 'pages/coeur';
-@import 'pages/bouton_validation';
+@import 'components/loading';
+@import 'components/coeur';
+@import 'components/bouton_validation';
 
-@import 'pages/header';
-@import 'pages/footer';
+@import 'layout/accueil_main';
+@import 'layout/header';
+@import 'layout/footer';
 
 @import 'pages/resto1';
 @import 'pages/resto2';
