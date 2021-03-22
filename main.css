@@ -1593,6 +1593,14 @@ header {
 }
 
 @media screen and (min-width: 1920px) {
+  .partie-commander_btn-commande {
+    margin: 0 450px;
+    height: 120px;
+    font-size: 1.235rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
   .animationMenus {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -139,11 +139,14 @@
 
 .partie-commander {
     height: 200px;
-
     @media screen and (min-width: 769px){
         height: 350px;
         padding-top: 100px;
     }
+    // @media screen and (min-width: 1920px){
+    //     height: 500px;
+    //     padding-top: 100px;
+    // }
 }
 
 .partie-commander_btn-commande {
@@ -171,6 +174,11 @@
         }
         @media screen and (min-width: 1700px) {
             margin: 0 600px;
+        }
+        @media screen and (min-width: 1920px) {
+            margin: 0 450px;
+            height: 120px;
+            font-size: .95rem *1.3;
         }
 }
 
