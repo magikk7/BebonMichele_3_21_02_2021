@@ -18,7 +18,7 @@
     overflow: hidden;
     text-overflow: ellipsis; 
     padding-bottom: 15px;
-    height: 70px;//ok
+    height: 70px;
 }
 
 .btn-2__titre {
@@ -74,6 +74,9 @@
     }
     @media screen and (min-width: 1280px) {
         width: 10%;
+    }
+    @media screen and (min-width: 1920px) {
+        width: 30%;
     }
 }
 

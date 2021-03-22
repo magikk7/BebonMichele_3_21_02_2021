@@ -922,6 +922,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .btn-2:hover .btn-2__validation {
+    width: 30%;
+  }
+}
+
 .btn-2:hover .btn-2__validation > .fa-check {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -1597,6 +1603,7 @@ header {
     margin: 0 450px;
     height: 120px;
     font-size: 1.235rem;
+    font-weight: 400;
   }
 }
 
@@ -1614,6 +1621,9 @@ header {
   }
   .animationMenus .menu-entrees, .animationMenus .menu-plats, .animationMenus .menu-desserts {
     padding: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
