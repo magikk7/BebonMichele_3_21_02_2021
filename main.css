@@ -1381,43 +1381,19 @@ header {
   background-color: white;
 }
 
-.section__encadrement--image1 {
+.section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
   background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
 @media screen and (min-width: 1280px) {
-  .section__encadrement--image1 {
+  .section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
     height: 100vh;
   }
 }
 
-.section__encadrement--image2 {
-  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-
-@media screen and (min-width: 1280px) {
-  .section__encadrement--image2 {
-    height: 100vh;
-  }
-}
-
-.section__encadrement--image3 {
-  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-
-@media screen and (min-width: 1280px) {
-  .section__encadrement--image3 {
-    height: 100vh;
-  }
-}
-
-.section__encadrement--image4 {
-  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-
-@media screen and (min-width: 1280px) {
-  .section__encadrement--image4 {
-    height: 100vh;
+@media screen and (min-width: 1920px) {
+  .section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
+    height: 50vh;
   }
 }
 
@@ -1442,10 +1418,12 @@ header {
 @media screen and (min-width: 1280px) {
   .section__menus-restaurant {
     margin: -600px 200px 0 200px;
-    border-radius: 50px;
-    background-color: #ae80e5;
-    -webkit-animation: couleur 10s infinite ease-in-out both;
-            animation: couleur 10s infinite ease-in-out both;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .section__menus-restaurant {
+    margin: -200px 200px 0 200px;
   }
 }
 
@@ -1611,6 +1589,23 @@ header {
 @media screen and (min-width: 1700px) {
   .partie-commander_btn-commande {
     margin: 0 600px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .animationMenus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .animationMenus .menu-entrees, .animationMenus .menu-plats, .animationMenus .menu-desserts {
+    padding: 20px;
   }
 }
 
