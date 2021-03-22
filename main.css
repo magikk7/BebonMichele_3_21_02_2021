@@ -1518,6 +1518,70 @@ header {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .animationMenus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .animationMenus .menu-entrees, .animationMenus .menu-plats, .animationMenus .menu-desserts {
+    padding: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+/*animation des menus*/
+.animationMenus > div {
+  -webkit-animation: apparaitre 1.6s ease-in-out;
+          animation: apparaitre 1.6s ease-in-out;
+}
+
+.animationMenus .menu-entrees {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animationMenus .menu-plats {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+.animationMenus .menu-desserts {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+@-webkit-keyframes apparaitre {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes apparaitre {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 .section__titre-menu {
   width: 48px;
   padding-bottom: 5px;
@@ -1604,73 +1668,6 @@ header {
     height: 120px;
     font-size: 1.235rem;
     font-weight: 400;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .animationMenus {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .animationMenus .menu-entrees, .animationMenus .menu-plats, .animationMenus .menu-desserts {
-    padding: 20px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-}
-
-/*animation des menus*/
-.animationMenus > div {
-  -webkit-animation: apparaitre 1.6s ease-in-out;
-          animation: apparaitre 1.6s ease-in-out;
-}
-
-.animationMenus .menu-entrees {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.animationMenus .menu-plats {
-  -webkit-animation-delay: 1.3s;
-          animation-delay: 1.3s;
-}
-
-.animationMenus .menu-desserts {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-}
-
-@-webkit-keyframes apparaitre {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes apparaitre {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
   }
 }
 
