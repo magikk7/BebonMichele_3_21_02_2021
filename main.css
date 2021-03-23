@@ -1488,6 +1488,13 @@ header {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .section__restaurant {
+    padding-left: 20px;
+    font-size: 1.69rem;
+  }
+}
+
 .section__titre-restaurant {
   -webkit-box-flex: 4;
       -ms-flex: 4;
