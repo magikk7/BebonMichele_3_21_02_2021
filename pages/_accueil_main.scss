@@ -1,3 +1,41 @@
+//header partie localisation
+.header__localisation {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border-top: 2px solid $border;
+    background-color: $background-gray85;     
+}
+
+.header_reservation {
+    background-color: $background-gray89;   
+    .header_titre2 {
+        padding: 0 30px 10px 30px;
+        font-size: $third-size;
+        @media screen and (min-width: 1023px){
+            padding-top: 20px;
+            font-size: $third-size *1.3;
+        }
+    }
+    .header_paragraphe {
+        margin-top: 10px;
+        font-size: $initial-size;
+        line-height: $line-height25;
+        color: $background-gray50;
+    }
+
+    .header_bouton {
+        display: inline-block;
+        @include dnone;
+        @extend %bouton-clicable;
+        @media screen and (min-width: 1023px){
+            padding: 25px 30px;
+            font-size: $third-size *1.2;
+            border-radius: nth($border-radius, 4);            
+        }
+    }
+}
+
 /*section1*/
 .main_section2_fonctionnement {
     padding: 50px 15px;
@@ -13,7 +51,7 @@
         font-size: $fourth-size *1.5;
     }
 }
-        
+
 .section1_boutons {
     @include dnone;
     color: $color-black;
@@ -27,7 +65,7 @@
 .btn-l {
     display: flex;
     align-items: center;
-    background-color: $background-gray3;
+    background-color: $background-gray85;
     transition: background-color 1s;
     @extend %btn-base;
     transform: scale(1);
@@ -45,13 +83,12 @@
         color: $primary-color;
         font-weight: $font-weight-9;
     }
+
     .bulle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter();
         height: 30px;
         width: 30px;
-        border-radius: 50%;
+        border-radius: $border-radius50;
         margin-right:30px;
         margin-left: -10px;
         color: $color-white;
@@ -60,7 +97,7 @@
             height: 30px *1.5;
             width: 30px *1.5;
             margin-left: -10px *7;
-            font-size: 1.5rem;
+            font-size: $fifth-size;
         }
     }
 }
@@ -80,7 +117,7 @@
 .main_section2_restaurants {
     margin: 0; 
     padding: 50px 0;
-    background-color: $background-gray3;  
+    background-color: $background-gray85;  
 }
 
 .section2_cards {
@@ -143,7 +180,7 @@
         border-radius: nth($border-radius, 1);
         font-size: $size-sm;
         font-weight: $font-weight-7;        
-        color : darken($third-color, 30%);
+        color : $primary-color-dark;
         background-color: $third-color;
     }
     .image {
@@ -171,7 +208,7 @@
         flex: 3;
         line-height: $line-height35; 
         @media (max-width: 365px){
-        line-height: $line-height30; 
+            line-height: $line-height30; 
         }
         h3::first-letter{
             text-transform: uppercase;

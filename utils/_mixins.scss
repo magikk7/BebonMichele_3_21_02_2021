@@ -1,23 +1,43 @@
 //mixins
-@mixin dnone {
-    text-decoration: none;
-    color: $color-white;
-}
-
 @mixin reset {
     margin: 0;
     padding: 0;
 }
 
+@mixin dnone {
+    text-decoration: none;
+    color: $color-white;
+}
+
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin linear-gradient {
+    background-image: linear-gradient(to top left, $primary-color, $secondary-color);
+}
+
+@mixin linear-gradient-light {
+    background-image: linear-gradient(to top left, lighten($primary-color, 5%), lighten($secondary-color, 5%));
+}
+
 @mixin shadows {
-    box-shadow: 5px 5px 10px darken($background-gray3, 15%);
+    box-shadow: 5px 5px 10px $background-gray85-dark1;
 }
 
 @mixin more-shadows {
-    box-shadow: 5px 5px 10px darken($background-gray3, 25%);
+    box-shadow: 5px 5px 10px $background-gray85-dark2;
 }
 
 @mixin border-top-radius {
     border-top-right-radius: nth($border-radius, 3);
     border-top-left-radius: nth($border-radius, 3); 
+}
+
+@mixin troisPoints {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

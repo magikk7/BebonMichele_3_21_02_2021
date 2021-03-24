@@ -1,49 +1,4 @@
-.header_logo--size2 {
-    height: auto;
-    max-width: nth($taille-logo, 1);
-}
-
-.section__page-retour {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-}
-
-.section__page-retour__icone {
-    position: absolute;
-    left: 0;
-    z-index: 1000;
-    width: 30%;
-    padding-left: 10px;
-    color: black;    
-    @media screen and (min-width: 446px) {
-        top: 20px;  
-    }
-    @media screen and (min-width: 550px) {
-        top: 27px;  
-    }
-    @media screen and (min-width: 640px) {
-        top: 30px;  
-    }
-    @media screen and (min-width: 669px) {
-        top: 20px;  
-    }
-    @media screen and (min-width: 670px) {
-        top: 35px;
-    }
-}
-
-.section__page-retour__logo {
-    flex: 1;
-    position: relative;
-    text-align: center;
-    background-color: $color-white;
-}
-
 .section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
-    background-image: $bg-image_1;
     @extend %encadrement-image;
     @media screen and (min-width: 1280px) {
         height: 100vh;
@@ -53,19 +8,39 @@
     }
 }
 
+.section__encadrement--image1 {
+    background-image: $bg-image_1;
+}
+
+.section__encadrement--image2 {
+    background-image: $bg-image_2;
+}
+
+.section__encadrement--image3 {
+    background-image: $bg-image_3;
+}
+
+.section__encadrement--image4 {
+    background-image: $bg-image_4;
+}
+
 .section__menus-restaurant {
-    background-color: $background-gray2;
+    background-color: $background-gray89;
     @include border-top-radius;
     margin-top: -120px;
     padding: 0 15px 70px 15px;
     @media screen and (min-width: 769px) {
         margin: -250px 100px 0 100px;
-        border-radius: 50px;
-        background-color: lighten($primary-color, 10%);
+        border-radius: nth($border-radius, 5);
+        background-color: $primary-color-light10;
         animation: couleur 10s infinite ease-in-out both;
+        @include shadows;
+        &:hover {
+            @include more-shadows; 
+        }
     }
     @media screen and (min-width: 1280px) {
-        margin: -600px 200px 0 200px;
+        margin: -600px 200px 0 200px; 
     }
     @media screen and (min-width: 1920px) {
         margin: -200px 200px 0 200px;
@@ -74,20 +49,18 @@
 
 @keyframes couleur {
     0% {
-        background-color: $primary-color-light;
+        background-color: $primary-color-light20;
     }
     50% {
         background-color: $primary-color;
     }
     100% {
-        background-color: $primary-color-light;
+        background-color: $primary-color-light20;
     }
 }
 
 .section__restaurant {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter ();
     @media (min-width: 769px) and (max-width: 917px) {        
         font-size: $third-size;
     }
@@ -122,7 +95,6 @@
         font-size: $third-size *1.2;
     }
 }
-
 
 .animationMenus {
     @media screen and (min-width: 1920px) {
@@ -191,9 +163,7 @@
 
 .partie-commander_btn-commande {
     @extend %bouton-clicable;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     align-content: center;
     margin: 0 80px;
     height: 62px; 

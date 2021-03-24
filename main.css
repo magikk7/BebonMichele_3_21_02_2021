@@ -35,8 +35,8 @@
   margin: 50px 0 20px 0;
   padding: 20px;
   cursor: pointer;
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356dc), to(rgba(255, 121, 218, 0.9)));
-  background: linear-gradient(to top left, #9356dc, rgba(255, 121, 218, 0.9));
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   border-radius: 30px;
   color: white;
   -webkit-box-shadow: 5px 5px 10px silver;
@@ -44,8 +44,8 @@
 }
 
 .header_reservation .header_bouton:hover, .partie-commander_btn-commande:hover {
-  background: -webkit-gradient(linear, right bottom, left top, from(rgba(147, 86, 220, 0.8)), to(rgba(255, 121, 218, 0.8)));
-  background: linear-gradient(to top left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#a16be0), to(#ff93e1));
+  background-image: linear-gradient(to top left, #a16be0, #ff93e1);
   -webkit-box-shadow: 5px 5px 10px #a6a6a6;
           box-shadow: 5px 5px 10px #a6a6a6;
 }
@@ -631,8 +631,8 @@ body {
   margin: 0 auto;
   text-align: center;
   border-radius: 30%;
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#c9abee), to(#ffdff6));
-  background-image: linear-gradient(to top left, #c9abee, #ffdff6);
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#a16be0), to(#ff93e1));
+  background-image: linear-gradient(to top left, #a16be0, #ff93e1);
 }
 
 .background {
@@ -769,11 +769,11 @@ body {
 }
 
 .fa-heart {
-  font-size: 1.375rem;
-  cursor: pointer;
+  position: absolute;
   top: 50px;
   right: 40px;
-  position: absolute;
+  font-size: 1.375rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 365px) {
@@ -795,9 +795,9 @@ body {
 }
 
 .fas1 {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   opacity: 0;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: content-box;
   -webkit-background-clip: text;
   color: transparent;
@@ -822,21 +822,15 @@ body {
   }
 }
 
-.emplacement-coeur {
-  margin: 0;
-  padding: 0;
-  background-color: mediumturquoise;
-}
-
 .btn-2 {
   width: 100%;
   margin: 8px 0;
   padding: 0 0 0 15px;
+  overflow: hidden;
   line-height: 25px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  overflow: hidden;
   background-color: white;
 }
 
@@ -846,11 +840,11 @@ body {
 
 .btn-2__menu {
   width: 100%;
+  height: 70px;
+  padding-bottom: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-bottom: 15px;
-  height: 70px;
 }
 
 .btn-2__titre {
@@ -895,7 +889,7 @@ body {
 
 .btn-2__validation .fa-check {
   padding: 4px;
-  font-size: .6rem;
+  font-size: 0.6rem;
   text-align: center;
   border-radius: 50%;
   color: #99e2d0;
@@ -931,6 +925,197 @@ body {
 .btn-2:hover .btn-2__validation > .fa-check {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+header {
+  text-align: center;
+  background-color: white;
+}
+
+.header_logo--size {
+  height: auto;
+  max-width: 60%;
+}
+
+.section__page-retour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+}
+
+.section__page-retour__icone {
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  width: 30%;
+  padding-left: 10px;
+  color: #0d0d0d;
+}
+
+@media screen and (min-width: 446px) {
+  .section__page-retour__icone {
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .section__page-retour__icone {
+    top: 27px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .section__page-retour__icone {
+    top: 30px;
+  }
+}
+
+@media screen and (min-width: 669px) {
+  .section__page-retour__icone {
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .section__page-retour__icone {
+    top: 35px;
+  }
+}
+
+.section__page-retour__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  text-align: center;
+  background-color: white;
+}
+
+/*footer*/
+.pied-de-page {
+  margin: 0;
+  padding: 20px 0 40px 22px;
+  height: 200px;
+  font-size: 0.8rem;
+  line-height: 25px;
+  color: white;
+  background-color: #0d0d0d;
+}
+
+@media screen and (min-width: 1023px) {
+  .pied-de-page {
+    height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.96rem;
+  }
+}
+
+.pied-de-page .titre1 {
+  padding: 0 0 20px 0;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 1023px) {
+  .pied-de-page .titre1 {
+    margin: 30px 0 10px 0;
+    text-align: center;
+    font-size: 1.12rem;
+  }
+}
+
+.pied-de-page .pied-de-page_liens--dnone {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 1023px) {
+  .pied-de-page .pied-de-page_liens--dnone {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+
+.pied-de-page .pied-de-page_liens--dnone i a {
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+
+.d-none {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 1023px) {
+  .pied-de-page_liens--width {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.header__localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  border-top: 2px solid #cccccc;
+  background-color: #e6e6e6;
+}
+
+.header_reservation {
+  background-color: #f0f0f0;
+}
+
+.header_reservation .header_titre2 {
+  padding: 0 30px 10px 30px;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1023px) {
+  .header_reservation .header_titre2 {
+    padding-top: 20px;
+    font-size: 1.69rem;
+  }
+}
+
+.header_reservation .header_paragraphe {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 25px;
+  color: #8d8d8d;
+}
+
+.header_reservation .header_bouton {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 1023px) {
+  .header_reservation .header_bouton {
+    padding: 25px 30px;
+    font-size: 1.56rem;
+    border-radius: 45px;
+  }
 }
 
 /*section1*/
@@ -1191,206 +1376,6 @@ body {
   text-transform: uppercase;
 }
 
-header {
-  text-align: center;
-  background-color: white;
-}
-
-.header_logo--size {
-  height: auto;
-  max-width: 60%;
-}
-
-.header__localisation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  border-top: 2px solid #cccccc;
-  background-color: #e6e6e6;
-}
-
-.header_reservation {
-  background-color: #f0f0f0;
-}
-
-.header_reservation .header_titre2 {
-  padding: 0 30px 10px 30px;
-  font-size: 1.3rem;
-}
-
-@media screen and (min-width: 1023px) {
-  .header_reservation .header_titre2 {
-    padding-top: 20px;
-    font-size: 1.69rem;
-  }
-}
-
-.header_reservation .header_paragraphe {
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 25px;
-  color: #8d8d8d;
-}
-
-.header_reservation .header_bouton {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-}
-
-@media screen and (min-width: 1023px) {
-  .header_reservation .header_bouton {
-    padding: 25px 30px;
-    font-size: 1.56rem;
-    border-radius: 45px;
-  }
-}
-
-/*footer*/
-.pied-de-page {
-  margin: 0;
-  padding: 20px 0 40px 22px;
-  height: 200px;
-  font-size: 0.8rem;
-  line-height: 25px;
-  color: white;
-  background-color: #0d0d0d;
-}
-
-@media screen and (min-width: 1023px) {
-  .pied-de-page {
-    height: 250px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 0.96rem;
-  }
-}
-
-.pied-de-page .titre1 {
-  padding: 0 0 20px 0;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 100;
-}
-
-@media screen and (min-width: 1023px) {
-  .pied-de-page .titre1 {
-    margin: 30px 0 10px 0;
-    text-align: center;
-    font-size: 1.12rem;
-  }
-}
-
-.pied-de-page .pied-de-page_liens--dnone {
-  list-style-type: none;
-}
-
-@media screen and (min-width: 1023px) {
-  .pied-de-page .pied-de-page_liens--dnone {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-  }
-}
-
-.pied-de-page .pied-de-page_liens--dnone i a {
-  text-decoration: none;
-  color: white;
-  list-style: none;
-}
-
-.d-none {
-  text-decoration: none;
-  color: white;
-}
-
-@media screen and (min-width: 1023px) {
-  .pied-de-page_liens--width {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.header_logo--size2 {
-  height: auto;
-  max-width: 60%;
-}
-
-.section__page-retour {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding: 10px;
-  text-align: left;
-}
-
-.section__page-retour__icone {
-  position: absolute;
-  left: 0;
-  z-index: 1000;
-  width: 30%;
-  padding-left: 10px;
-  color: black;
-}
-
-@media screen and (min-width: 446px) {
-  .section__page-retour__icone {
-    top: 20px;
-  }
-}
-
-@media screen and (min-width: 550px) {
-  .section__page-retour__icone {
-    top: 27px;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .section__page-retour__icone {
-    top: 30px;
-  }
-}
-
-@media screen and (min-width: 669px) {
-  .section__page-retour__icone {
-    top: 20px;
-  }
-}
-
-@media screen and (min-width: 670px) {
-  .section__page-retour__icone {
-    top: 35px;
-  }
-}
-
-.section__page-retour__logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  position: relative;
-  text-align: center;
-  background-color: white;
-}
-
-.section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
-  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-
 @media screen and (min-width: 1280px) {
   .section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
     height: 100vh;
@@ -1401,6 +1386,22 @@ header {
   .section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
     height: 50vh;
   }
+}
+
+.section__encadrement--image1 {
+  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.section__encadrement--image2 {
+  background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.section__encadrement--image3 {
+  background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.section__encadrement--image4 {
+  background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 .section__menus-restaurant {
@@ -1418,6 +1419,12 @@ header {
     background-color: #ae80e5;
     -webkit-animation: couleur 10s infinite ease-in-out both;
             animation: couleur 10s infinite ease-in-out both;
+    -webkit-box-shadow: 5px 5px 10px silver;
+            box-shadow: 5px 5px 10px silver;
+  }
+  .section__menus-restaurant:hover {
+    -webkit-box-shadow: 5px 5px 10px #a6a6a6;
+            box-shadow: 5px 5px 10px #a6a6a6;
   }
 }
 
@@ -1676,17 +1683,5 @@ header {
     font-size: 1.235rem;
     font-weight: 400;
   }
-}
-
-.section__encadrement--image2 {
-  background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-
-.section__encadrement--image3 {
-  background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
-
-.section__encadrement--image4 {
-  background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 /*# sourceMappingURL=main.css.map */

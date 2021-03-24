@@ -5,7 +5,7 @@ html, body {
     font-family: $first_font-family;
     font-size: $first-size;
     color: $color-black;
-    background-color:  $background-gray2;
+    background-color: $background-gray89;
 }
 
 *, ::after, ::before {
@@ -31,7 +31,7 @@ html, body {
 }
 
 .pt-1 {
-padding-top: 9px;
+    padding-top: 9px;
 }
 
 .pb-1 {
@@ -74,5 +74,5 @@ padding-top: 9px;
     
 /*background-color*/
 .bg-2 {
-    background-color: $background-gray1;
+    background-color: $background-gray50;
 }

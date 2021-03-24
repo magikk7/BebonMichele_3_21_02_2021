@@ -1,6 +1,6 @@
 //animation d'entrée
 body {
-    position: relative;  
+position: relative;  
 }
 
 /*div1*/
@@ -12,9 +12,7 @@ body {
     height: 100%;
     z-index: 1000;
     background-color: $color-white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     animation: fadeout 3s ease forwards;
     animation-delay: 3s;
 }
@@ -31,41 +29,33 @@ body {
 
 /*plateau*/
 .container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     width: 90vw;
     height: 80vh;
     margin: 0 auto;
     text-align: center;    
-    border-radius: 30%;
-    background-image: linear-gradient(to top left, $primary-color-light, $secondary-color-light);
+    border-radius: $border-radius30;
+    @include linear-gradient-light;
 }
 
 .background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     width: 100vw;
     height: 75vh;
     margin: 0 auto;
-    border-radius: 20%;
+    border-radius: $border-radius20;
     background-color: $color-white;    
     }
 
 .container1_animation1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     position: relative;
     width: 200px;
     height: 200px;
 }
 
 .animation1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     width: 150px;
     height: 150px;
     position: relative;
@@ -73,15 +63,13 @@ body {
 }
 
 .carre1, .carre2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     width: 100%;
     height: 100%;
     position: absolute;
     box-shadow: 5px 5px 100px $primary-color;
     opacity: .6;
-    border-radius: 15px;
+    border-radius: nth($border-radius, 6); 
     border: 4px solid $primary-color;
     color: $third-color;
     background-color: $color-white;
@@ -105,5 +93,5 @@ body {
 }
 
 .size-utensils {
-    font-size: 1rem;
+    font-size: $initial-size;
 }

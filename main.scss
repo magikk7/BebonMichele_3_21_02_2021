@@ -10,14 +10,12 @@
 @import 'components/coeur';
 @import 'components/bouton_validation';
 
-@import 'layout/accueil_main';
+
 @import 'layout/header';
 @import 'layout/footer';
 
-@import 'pages/resto1';
-@import 'pages/resto2';
-@import 'pages/resto3';
-@import 'pages/resto4';
+@import 'pages/accueil_main';
+@import 'pages/resto';
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');

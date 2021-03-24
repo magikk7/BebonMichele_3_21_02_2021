@@ -3,9 +3,9 @@
     width: 100%;
     margin: 8px 0;
     padding: 0 0 0 15px;
+    overflow: hidden;
     line-height: $line-height25;
     align-items: flex-end; 
-    overflow: hidden;
     background-color: $color-white;
     &:hover {
         background-color: $color-white;
@@ -14,25 +14,19 @@
 
 .btn-2__menu {
     width: 100%;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    padding-bottom: 15px;
     height: 70px;
+    padding-bottom: 15px;
+    @include troisPoints;    
 }
 
 .btn-2__titre {
     font-size: $initial-size;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
+    @include troisPoints;   
 }
 
 .btn-2__texte  {
     font-size: $size-sm1;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
+    @include troisPoints;   
 }
 
 .btn-2__cout {
@@ -45,8 +39,7 @@
     @extend %btn-base;
     justify-content: center;
     width: 0;
-    margin: 0;
-    padding: 0;
+    @include reset;
     overflow: hidden;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -58,9 +51,9 @@
     
 .fa-check {
     padding: 4px;
-    font-size: .6rem;
+    font-size: $second-size /2;//.6rem
     text-align: center;
-    border-radius: 50%;
+    border-radius: $border-radius50;
     color: $third-color;
     background-color: $color-white;    
     transition: transform ease-in-out 1s, color 1s;
