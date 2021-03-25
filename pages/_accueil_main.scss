@@ -64,12 +64,13 @@
 
 .btn-l {
     display: flex;
-    align-items: center;
+    @extend %btn-base;
     background-color: $background-gray85;
     transition: background-color 1s;
-    @extend %btn-base;
     transform: scale(1);
     transition: transform 1.2s;
+        margin: 15px 5px;
+        padding: 0;
     @media screen and (min-width: 1023px){
         width: 70%;
         margin: 10px;
@@ -89,10 +90,13 @@
         height: 30px;
         width: 30px;
         border-radius: $border-radius50;
-        margin-right:30px;
+        margin-right: 5px;
         margin-left: -10px;
         color: $color-white;
         background-color: $primary-color;
+        @media screen and (min-width: 758px){
+            margin-right: 30px;
+        }
         @media screen and (min-width: 1023px){
             height: 30px *1.5;
             width: 30px *1.5;
@@ -102,9 +106,28 @@
     }
 }
 
+.f-icone {
+        width: 40px;
+        margin-left: 10px;
+    @media screen and (min-width: 758px){
+        width: 80px;
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+    @media screen and (min-width: 1280px){
+        width: 90px;
+        margin-left: 45px;
+        font-size: 1.6rem;
+    }
+    @media screen and (min-width: 1920px){
+        width: 100px;
+        margin-left: 50px;
+    }
+}
+
 .btn-1_bouton {
     @media (max-width: 365px){
-    padding-right: 30px;
+    font-size: .75rem;
     }
 }
     

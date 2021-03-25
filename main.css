@@ -1183,9 +1183,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #e6e6e6;
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
@@ -1195,6 +1192,8 @@ header {
   transition: -webkit-transform 1.2s;
   transition: transform 1.2s;
   transition: transform 1.2s, -webkit-transform 1.2s;
+  margin: 15px 5px;
+  padding: 0;
 }
 
 @media screen and (min-width: 1023px) {
@@ -1229,10 +1228,16 @@ header {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  margin-right: 30px;
+  margin-right: 5px;
   margin-left: -10px;
   color: white;
   background-color: #9356DC;
+}
+
+@media screen and (min-width: 758px) {
+  .btn-l .bulle {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (min-width: 1023px) {
@@ -1244,9 +1249,37 @@ header {
   }
 }
 
+.f-icone {
+  width: 40px;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 758px) {
+  .f-icone {
+    width: 80px;
+    margin-left: 10px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .f-icone {
+    width: 90px;
+    margin-left: 45px;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .f-icone {
+    width: 100px;
+    margin-left: 50px;
+  }
+}
+
 @media (max-width: 365px) {
   .btn-1_bouton {
-    padding-right: 30px;
+    font-size: .75rem;
   }
 }
 
