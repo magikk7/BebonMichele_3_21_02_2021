@@ -1,4 +1,4 @@
-.section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
+.la-palette-du-gout, .la-note-enchantee, .a-la-francaise, .le-delice-des-sens {
     @extend %encadrement-image;
     @media screen and (min-width: 1280px) {
         height: 100vh;
@@ -8,20 +8,11 @@
     }
 }
 
-.section__encadrement--image1 {
-    background-image: $bg-image_1;
-}
-
-.section__encadrement--image2 {
-    background-image: $bg-image_2;
-}
-
-.section__encadrement--image3 {
-    background-image: $bg-image_3;
-}
-
-.section__encadrement--image4 {
-    background-image: $bg-image_4;
+/*les photos*/
+@each $restaurants in la-palette-du-gout, la-note-enchantee, a-la-francaise, le-delice-des-sens {
+    .#{$restaurants} {
+    background-image: url('/images/restaurants/#{$restaurants}.jpg');
+    }
 }
 
 .section__menus-restaurant {

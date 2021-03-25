@@ -55,16 +55,10 @@ html, body {
 }
 
 /*font-weight*/
-.weight-5 {
-    font-weight: $font-weight-5;
-}
-    
-.weight-7 {
-    font-weight: $font-weight-7;
-}
-
-.weight-9 {
-    font-weight: $font-weight-9;
+@for $i from 1 through 9 {
+    .weight-#{$i} {
+        font-weight: $i * 100;
+    }
 }
         
 /*line-height*/

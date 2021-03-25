@@ -50,7 +50,7 @@
           box-shadow: 5px 5px 10px #a6a6a6;
 }
 
-.section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
+.la-palette-du-gout, .la-note-enchantee, .a-la-francaise, .le-delice-des-sens {
   width: 100%;
   height: 400px;
   background-size: cover;
@@ -543,12 +543,36 @@ html, body {
 }
 
 /*font-weight*/
+.weight-1 {
+  font-weight: 100;
+}
+
+.weight-2 {
+  font-weight: 200;
+}
+
+.weight-3 {
+  font-weight: 300;
+}
+
+.weight-4 {
+  font-weight: 400;
+}
+
 .weight-5 {
   font-weight: 500;
 }
 
+.weight-6 {
+  font-weight: 600;
+}
+
 .weight-7 {
   font-weight: 700;
+}
+
+.weight-8 {
+  font-weight: 800;
 }
 
 .weight-9 {
@@ -1377,31 +1401,32 @@ header {
 }
 
 @media screen and (min-width: 1280px) {
-  .section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
+  .la-palette-du-gout, .la-note-enchantee, .a-la-francaise, .le-delice-des-sens {
     height: 100vh;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .section__encadrement--image1, .section__encadrement--image2, .section__encadrement--image3, .section__encadrement--image4 {
+  .la-palette-du-gout, .la-note-enchantee, .a-la-francaise, .le-delice-des-sens {
     height: 50vh;
   }
 }
 
-.section__encadrement--image1 {
-  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+/*les photos*/
+.la-palette-du-gout {
+  background-image: url("/images/restaurants/la-palette-du-gout.jpg");
 }
 
-.section__encadrement--image2 {
-  background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+.la-note-enchantee {
+  background-image: url("/images/restaurants/la-note-enchantee.jpg");
 }
 
-.section__encadrement--image3 {
-  background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+.a-la-francaise {
+  background-image: url("/images/restaurants/a-la-francaise.jpg");
 }
 
-.section__encadrement--image4 {
-  background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+.le-delice-des-sens {
+  background-image: url("/images/restaurants/le-delice-des-sens.jpg");
 }
 
 .section__menus-restaurant {
