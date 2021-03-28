@@ -30,31 +30,31 @@ body {
 }
 
 /*plateau*/
-.container1 {
-    @include flexCenter();
-    width: 90vw;
-    height: 80vh;
-    margin: 0 auto;
-    text-align: center;    
-    border-radius: $border-radius30;
-    @include linear-gradient-light;
-}
+// .container1 {
+//     @include flexCenter();
+//     width: 90vw;
+//     height: 80vh;
+//     margin: 0 auto;
+//     text-align: center;    
+//     border-radius: $border-radius30;
+//     @include linear-gradient-light;
+// }
 
-.background {
-    @include flexCenter();
-    width: 100vw;
-    height: 75vh;
-    margin: 0 auto;
-    border-radius: $border-radius20;
-    background-color: $color-white;    
-    }
+// .background {
+//     @include flexCenter();
+//     width: 100vw;
+//     height: 75vh;
+//     margin: 0 auto;
+//     border-radius: $border-radius20;
+//     background-color: $color-white;    
+//     }
 
-.container1_animation1 {
-    @include flexCenter();
-    position: relative;
-    width: 200px;
-    height: 200px;
-}
+// .container1_animation1 {
+//     @include flexCenter();
+//     position: relative;
+//     width: 200px;
+//     height: 200px;
+// }
 
 .animation1 {
     @include flexCenter();
