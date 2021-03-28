@@ -591,6 +591,8 @@ html, body {
 
 body {
   position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 /*div1*/
@@ -599,7 +601,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1000;
   background-color: white;
   display: -webkit-box;
@@ -1376,7 +1378,7 @@ header {
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 1;
   padding: 8px;
   border-radius: 5px;
   font-size: 0.8rem;
