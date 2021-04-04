@@ -1,13 +1,12 @@
 //animation d'entrée
 body {
-    position: relative;
     max-width: 2000px;
     margin: 0 auto;
 }
 
 /*div1*/
 .div-apparition1 {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;

@@ -91,38 +91,11 @@
     @media screen and (min-width: 1920px) {
         display: flex;
         justify-content: center;
+        height: 500px;
         .menu-entrees, .menu-plats, .menu-desserts {
             padding: 20px;
             flex: 1;
         }
-    }
-}
-
-/*animation des menus*/
-.animationMenus > div {
-    animation: apparaitre 1.6s ease-in-out;
-}
-
-.animationMenus .menu-entrees {
-    animation-delay: 1s;
-}
-
-.animationMenus .menu-plats {
-    animation-delay: 1.3s;  
-}
-
-.animationMenus .menu-desserts {
-    animation-delay: 1.6s;
-}
-
-@keyframes apparaitre {
-    from {
-        opacity: 0;
-        transform: translateY(200px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
     }
 }
 

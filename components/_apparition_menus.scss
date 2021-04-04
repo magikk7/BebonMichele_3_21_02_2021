@@ -1,0 +1,30 @@
+.anim {
+    height: 0vh;
+    animation: monter 2s ease-in-out forwards;
+}
+
+.delay1 {
+    animation-delay: 0.5s;
+}
+
+.delay2 {
+    animation-delay: 1s;
+}
+
+.delay3  {
+    animation-delay: 1.5s;
+}
+
+@keyframes monter {
+    0% {
+        opacity: 0; 
+    }
+    80% {
+        height: 30px;
+        opacity: 0; 
+    }
+    100% {
+        height: 90px;
+        opacity: 1; 
+    }
+}
